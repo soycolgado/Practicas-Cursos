@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #f2f2f2;
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background: #0e6ba8;
+    margin: 20px;
+    float: right;
+}
+
+.posicionada{
+    background: #6695e8;
+    /* position: absolute;
+    left: 200px; */
+    
+}
+
+/* .posicionada2{
+    background: yellow;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+
+.cajaPadre{
+    margin: 20px;
+    background: #2e294e;
+    position: relative;
+    width: 500px;
+    height: 500px;
+} */

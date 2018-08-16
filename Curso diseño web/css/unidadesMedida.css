@@ -1,0 +1,12 @@
+body{
+    font-size:15px;
+}
+
+p{
+    font-size:1.5em;
+}
+div{
+    width: 10em;
+    height: 10em;
+    background: #000;
+}
