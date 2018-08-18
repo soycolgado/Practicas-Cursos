@@ -5,11 +5,10 @@
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
-    background: #000 url(imagenes/fondo.jpg);
+    background: #000 url("imagenes/fondo.jpg");
+    font-family: "Open Sans",sans-serif;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .contenedor{
@@ -22,34 +21,30 @@ body{
 }
 
 header{
-    display: flex;
     width: 100%;
     padding: 50px 0;
+    display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
     justify-content: space-between;
-    align-items:center; 
-    
-}
-
-header .menu{
-
 }
 
 header .menu a{
     color: #fff;
     text-decoration: none;
-    margin-right: 40px;
-    font-size: 18px;
+    margin-right:40px;
+    font-size: 18px; 
 }
 
-header .menu a:hover{
+header nav a:hover{
     text-decoration: underline;
 }
 
 .main{
     background: #fff;
-    width: 70%;
     padding: 20px;
+    width: 70%;
 }
 
 .main article .thumb{
@@ -76,11 +71,11 @@ header .menu a:hover{
 aside{
     width: 30%;
     background: #537dca;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 20px;
 }
 
 aside .ad{
@@ -88,31 +83,99 @@ aside .ad{
     text-align: center;
     color: #fff;
     padding: 50px 0;
-    background: #4264ae;
-    /* margin-bottom: 20px; */
+    background: #4264a2;
 }
 
 footer{
-    margin: 20px 0;
-    background: rgba(255, 255, 255, .2);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
     width: 100%;
-    color: #fff;
+    margin:20px 0;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center; 
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
 }
 
 footer .redes-sociales a{
     text-decoration: underline;
     color: #fff;
-    margin-left:20px; 
+    margin-left: 20px;
 }
 
 footer .redes-sociales a:hover{
-    text-decoration:none;
+    text-decoration: none;
 }
 
+@media screen and (max-width:800px){
+    .main{
+        width: 100%;
+    }
+
+    aside{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    aside .ad{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px){
+    header{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    header .menu{
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        text-align: center;
+        padding: 20px;
+        
+    }
+
+    header .logo{
+        margin-bottom: 20px;
+    }
+
+    header .menu a{
+        margin: 0 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .autor{
+        width: 100%;
+        order: 2
+    }
+
+    footer .redes-sociales{
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:400px){
+    aside{
+        display: none;
+    }
+
+    header .menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .menu a{
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+    }
+}
 
