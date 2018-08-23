@@ -1,0 +1,39 @@
+body
+    background: #f2f2f2
+    font-family: Arial, Helvetica, sans-serif
+
+.boton
+    display: inline-block
+    padding: 15px 20px
+    background: none
+    color: #ffffff
+    text-decoration: none
+    margin-right: 20px
+    border-radius: 3px
+    border: 1px solid transparent
+    
+        
+
+.btn-rojo
+    @extend .boton
+    background: #ff2732
+    &:hover
+        color: #ff2732
+        background: none
+        border: 1px solid #ff2732
+
+.btn-azul
+    @extend .boton
+    background: #246eb9
+    &:hover
+        color: #246eb9
+        background: none
+        border: 1px solid #246eb9
+
+.btn-verde
+    @extend .boton
+    background: #4fb560
+    &:hover
+        background: none
+        color: #4fb560
+        border: 1px solid #4fb560
