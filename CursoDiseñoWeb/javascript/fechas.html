@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fechas en javascritp</title>
+
+</head>
+<body>
+    <script>
+        
+        // var tiempo = setInterval(mostrarFecha,1000);
+        // function mostrarFecha(){
+        //     var fecha = new Date();
+        //     console.log(fecha.getHours()+':'+fecha.getMinutes()+':'+fecha.getSeconds());
+        // }
+
+        var fecha = new Date();
+        document.write(fecha);
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+
+        var semana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabados'];
+
+        console.log(semana[fecha.getDay()]);
+    </script>
+</body>
+</html>

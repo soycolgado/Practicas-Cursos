@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos Javascript</title>
+</head>
+<body>
+    <script>
+        //OBJETOS LITERALES
+        // var nestor = {
+        //     nombre:'Nestor Bardel',
+        //     edad: 31,
+        //     pais: 'Argentina',
+        //     bio:function(){
+        //         return this.nombre + ' tiene '+this.edad+' años';
+        //     }
+        // };
+
+        // var cielo = {
+        //     nombre: 'Maria Cielo',
+        //     edad: 27,
+        //     pais:'Argentina',
+        //     bio: function(){
+        //         return this.nombre+' tiene '+this.edad+' años';
+        //     }
+        // };
+
+        // document.write(nestor.bio());
+        // document.write('<br>');
+        // document.write(cielo.bio());
+
+        //OBJETOS COMO SON EN JAVASCRIPT
+        function Persona(nombre,edad,pais){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.pais = pais;
+            this.retornarPersona = retornarPersona;
+        }
+
+        function retornarPersona(){
+            return this.nombre + ' tiene '+this.edad+' años y es de '+this.pais+'<br>';
+        }
+
+        var nestor = new Persona('Nestor',31,'Argentina');
+        var cielo = new Persona('Maria Cielo',27,'Argentina');
+
+        document.write(nestor.retornarPersona());
+        document.write(cielo.retornarPersona());
+    </script>
+</body>
+</html>
