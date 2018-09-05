@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="reproductor">
+            <video src="media/Imagine Dragons - Believer (youtubemp4.to).mp4" class="video" id="video">
+                <p>Tu navegador no soporta video en HTML5</p>
+            </video>
+            
+            <div class="controles">
+                <input type="range" name="tiempo" class="tiempo" id="tiempo" min="0" value="0" step="0.1">
+                <button class="btn play" id="btnPlay"><span class="fa fa-play" id="icono"></span></button>
+                <input type="range" name="volumen" class="volumen" id="volumen" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+    </div>
+
+    <script src="reproductor.js"></script>
+</body>
+</html>
