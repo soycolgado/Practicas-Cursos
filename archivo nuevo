@@ -1,0 +1,31 @@
+JQUERY
+FUNCION PARA INICIALIZAR
+$(document).ready(funcion a ejecutar);
+
+SELECTORES
+$(selector).hide();
+el selector es igual que en css ejemplo('h1','.clase','#id','ul li')
+
+EFECTOS
+$(selector).efecto(velocidad(en milisegundos),callback);
+
+show hide toggle(alterna show y hide):
+Ejemplo:
+$('.caja').hide(3000,funcion);
+$('.caja').show(3000,funcion);
+$('.caja').toggle(3000,funcion);
+
+fadeIn, fadeOut, fadeToggle
+$('.caja').fadeIn(3000,funcion);
+$('.caja').fadeOut(3000,funcion);
+$('.caja').fadeToggle(3000,funcion);
+
+slidedown, slideUp, slideToggle
+$('.caja').slideDown(3000,funcion);
+$('.caja').slideUp(3000,funcion);
+$('.caja').slideToggle(3000,funcion);
+
+
+
+
+
