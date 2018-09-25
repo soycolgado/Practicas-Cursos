@@ -25,7 +25,122 @@ $('.caja').slideDown(3000,funcion);
 $('.caja').slideUp(3000,funcion);
 $('.caja').slideToggle(3000,funcion);
 
+ENCADENAMIENTO
+$('#tercera').parent().css();
 
+APLICAR CSS CON JQUERY
+Forma como paremetro
+$('#tercera').parent().css('background','#fff');
+Forma como objeto
+$('#tercera').parent().css({
+    background:'#fff'
+});
 
+OBTENER ELEMENTOS DEL DOM
+Obtener elemento padre
+    $('#tercera').parent();
 
+Obtener todos los elementos padres
+    $('#tercera').parents
 
+OBTENER LOS ELEMENTOS HIJOS DIRECTOS(todos)
+    $('#padre').children();
+
+OBTENER ELEMENTOS HIJOS DIFERENCIANDO CON PARAMETRO DIRECTOS(class,id, etc)
+    $('#padre').children('#hijo');
+
+OBTENER ELEMENTOS HIJOS PERO BUSCANDO EN VARIOS NIVELES
+    $('#contenedor').find('div.caja');
+
+OBTENER ELEMENTOS HERMANOS(pero no si mismo)
+    $('#tercera').siblings();
+
+OBTENER ELEMENTOS SIGUIENTE Y ANTERIOR(en el mismo nivel)
+    $('#tercera').prev();
+    $('#tercera').next();
+
+OBETENER TODOS LOS ELEMENTOS ANTERIORES Y TODOS LOS ELEMENTOS POSTERIORES HERMANOS
+    $('#tercera').prevAll();
+    $('#tercera').nextAll();
+
+//SELECCIONA LA PRIMERA CAJA
+    $('.caja').first().css({background:'#000'});
+//SELECCIONA LA ULTIMA CAJA
+    $('.caja').last().css({background:'#000'});
+//SELECCIONA CON EL INDEX
+    $('.caja').eq(2).css({background:'#000'});
+//SELECCIONAR CAJA DEPENDIENDO DE ALGUN ATRIBUTO
+    $('.caja').filter('#segunda').css({background:'#000'});
+//SELECCIONAR FILTRANDO POR NEGACION
+    $('.caja').not('#segunda').css({background:'#ff2'});
+
+EVENTOS!!!!!!
+
+ //POR MEDIO DE FUNCION ANONIMA
+   boton.click(function(){
+       alert('Hola');
+   });
+    //POR MEDIO DE FUNCION CREADA
+    boton.click(saludo);
+//METODO MAS UTILIZADO EN LA ACTUALIZADAD 
+    LLAMANDO FUNCION
+    boton.on('click',funcion);
+    UTILIZANDO CALLBACK
+    boton.on('mouseleave',function(){
+        $('body').css({background:'#000'});
+    });
+//ELIMINAR EVENTOS
+    boton.off('click');
+//PREVENIR COMPORTAMIENTOS (EJEMPLO CON ENLACES)
+    $('a').on('click',function(e){
+        e.preventDefault();
+    });
+//CAMBIAR CLASES CON JQUERY
+$('.caja').toggleClass(color);
+
+//PALABRA RESERVADA THIS
+Ejemplo:
+$('.caja').on('click',function(){
+    $(this).toggleClass('color');
+});
+
+ANIMACIONES JQUERY!!!!!!!!!!!!
+Estructura:
+$(selector).animate({parametros},velocidad,callback);
+Ejemplo solo con parametros
+$('#caja').animate({
+    width:'300px', //Propiedad CSS dentro de un objeto jquery
+    opacity:'0.2'
+});
+Ejemplo con velocidad y callback:
+$('#caja').animate({
+    width:'300px', //Propiedad CSS dentro de un objeto jquery
+    opacity:'0.2'
+},2000,function(){
+    alert('fin de la animacion');
+});
+Truquito!! ir sumando valores:
+$('#caja').animate({
+    width:'+=300px'
+},1000);
+En Jquery no es posible animar colores, esto se puede hacer mezclando css3 Ejemplo:
+//Agregar keyFrame al estilo
+@keyframe colores{
+    from{background:#102938;}
+    to{background:#000}
+}
+//Poner animacion en una clase
+.animacion{
+    animation:colores 3s ease;
+}
+
+//Por ultimo agregar la clase en Jquery
+$('#boton').on('click',function(){
+    $('#caja').addClass('animacion');
+});
+
+PARAR ANIMACIONES
+$('#parar').on('click',function(){
+        //.stop(limpiarAnimaciones,Saltar al final);
+        $('.caja').stop(true,false);
+    });
