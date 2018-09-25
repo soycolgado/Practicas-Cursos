@@ -144,3 +144,6 @@ $('#parar').on('click',function(){
         //.stop(limpiarAnimaciones,Saltar al final);
         $('.caja').stop(true,false);
     });
+
+CALLBACK
+Funcion que se realiza despues de terminada una accion
