@@ -147,3 +147,25 @@ $('#parar').on('click',function(){
 
 CALLBACK
 Funcion que se realiza despues de terminada una accion
+
+MANIPULANDO EL DOM
+Tomar y modificar texto de una marca html
+$('#titulo').text(); toma el valor del texto dentro de la marca
+$('#titulo').text('Texto modificado');modificar el valor del texto dentro de la marca
+
+Tomar e insertar codigo html
+$('#titulo').html('<ul>Subrayado</ul>'); Inserta dentro del elemento codigo html
+
+Tomar y cambiar valor (value) de un elemento
+$('#nombre').val(); //Toma el valor
+$('#nombre').val('Enviar') //Setea el valor
+
+Tomar y modificar atributos:
+$('#enlace').attr('href') //Toma el valor del atributo
+$('#enlace').attr('href','http://www.yahoo.com') modifica el valor del atributo
+
+Modificar multiples atributos(por medio de un objeto)
+$('#enlace').attr({
+    'class':'azul';
+    'target':'_blank'
+});
