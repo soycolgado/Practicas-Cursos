@@ -201,3 +201,19 @@ $('#boton').css({
     'width':'100px',
     'height':'100px' //El ultimo no lleva coma;
 });
+
+MEDIDAS JQUERY
+Obtener el width:
+$('#titulo').width();
+Obtener el width con el padding incluido:
+$('#titulo').innerWidth();
+Obtemer el width con el padding + border incluido:
+$('#titulo').outerWidth();
+Width con padding + border + margin:
+    $('#titulo').outerWidth(true);
+
+Para el height es lo mismo pero usando .height():
+titulo.height();
+titulo.innerHeight();
+titulo.outerHeight();
+titulo.outerHeight(true);
