@@ -169,3 +169,35 @@ $('#enlace').attr({
     'class':'azul';
     'target':'_blank'
 });
+
+AGREGANDO ELEMENTOS HTML AL DOM CON JQUERY
+para crear un elemento en este caso un div lo hacemos como un selector, en el ejemplo le ponemos tambien el atributo class y un texto:
+    var caja = $('<div></div>').attr('class','caja').text('Hola');
+paso siguiente lo metemos en un contenedor (o body):
+    $('#contenedor').append(caja);
+Para colocar el elemento al inicio:
+    $('#contenedor').prepend(caja);
+Para agregar antes del contenedor(no adentro):
+    $('#contenedor').before(caja);
+Para agregar despues del contenedor(no adentro):
+    $('#contenedor').after(caja);
+
+BORRAR ELEMENTOS HTML DEL DOM CON JQUERY
+Para borrar el mas utilizado es el remove, Ejemplos:
+    $('#contenedor').remove();
+    $('#contenedor').children().remove();
+Para borrar los elementos contenidos de un elementos HTML se usa empty, Ejemplo:
+    $('#contenedor').empty();
+
+TRABAJANDO CON CSS DESDE JQUERY
+Agregar class:
+$('#boton').addClass('naranja');
+Sacar class:
+$('#boton').removeClass('naranja');
+Alternar Class:
+$('#boton').toggleClass('naranja');
+Modificar Css por medio de un objeto:
+$('#boton').css({
+    'width':'100px',
+    'height':'100px' //El ultimo no lleva coma;
+});
