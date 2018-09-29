@@ -105,6 +105,7 @@ header .textos h3{
     top: 150px;
     z-index: 1;
     float: right;
+    right: 0;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, .32);
 }
 
@@ -179,4 +180,81 @@ header .textos h3{
     clear: both;
 }
 
-ESTA ES UNA PRUEBA
+.main .galeria{
+    overflow: hidden;
+}
+
+.main .galeria .foto{
+    width: 25%;
+    float: left;
+}
+
+.main .galeria .foto img{
+    width: 100%;
+    vertical-align: top;
+    opacity: 0.7;
+}
+
+.main .galeria .foto:hover img{
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.main .ubicacion{
+    background: #fff;
+    padding: 60px 0;
+
+}
+
+.main .ubicacion .titulo{
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.main .ubicacion .horarios{
+    width: 50%;
+    float: right;
+    text-align: right;
+    overflow: hidden;
+}
+
+.main .ubicacion .horarios h4{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana{
+    width: 50%;
+    float:left;
+    text-align: center;
+}
+
+.main .mapa{
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe{
+    width: 100%;
+    max-height: 600px;
+}
+
+footer{
+    background: #000;
+}
+
+footer .copyright{
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+}
