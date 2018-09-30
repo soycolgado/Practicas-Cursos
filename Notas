@@ -227,3 +227,13 @@ CALCULAR POSICION EN PANTALLA DE ELEMENTO JQUERY
 $('#acerca-de').offset().top;
 
 COMO IR A UN ELEMENTO POR MEDIO DE UNA ANIMACION Y EL SCROLL
+ var acercaDe = $('#acerca-de').offset().top,
+        menu = $('#platillos').offset().top,    
+        galeria = $('#galeria').offset().top,
+        ubicacion = $('#ubicacion').offset().top;
+
+    $('#btn-acerca-de').on('click',function(){
+        $('html, body').animate({
+            scrollTop:acercaDe -100
+        },500);
+    });
