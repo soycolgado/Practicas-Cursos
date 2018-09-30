@@ -217,3 +217,13 @@ titulo.height();
 titulo.innerHeight();
 titulo.outerHeight();
 titulo.outerHeight(true);
+
+PONER UNA FUNCION A CADA UNO DE LOS ELEMENTOS
+$('.menu a').each(function(index,elemento){
+
+});
+
+CALCULAR POSICION EN PANTALLA DE ELEMENTO JQUERY
+$('#acerca-de').offset().top;
+
+COMO IR A UN ELEMENTO POR MEDIO DE UNA ANIMACION Y EL SCROLL
