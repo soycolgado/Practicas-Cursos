@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FlexBox</title>
+    <title>FlexBox 3</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         .contenedor{
@@ -23,96 +23,201 @@
 <body>
 
     <div class="container">
-        <div class="row mt-3">
+        <div class="row my-4">
             <div class="col">
-                <h4>Tipos de Display</h4>
+                <h4>Wrap</h4>
                 <hr>
 
-                <div class="bg-primary text-white p-3 d-flex">
-                    <p class="mb-0">Display Flex <strong>.d-flex</strong></p>
+                <p>.flex-nowrap</p>
+                <div class="contenedor d-flex flex-nowrap">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
-                <br>
-                <div class="bg-primary text-white p-3 d-inline-flex">
-                    <p class="mb-0">Display Flex <strong>.inline-flex</strong></p>
+
+                <p>.flex-wrap</p>
+                <div class="contenedor d-flex flex-wrap">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
+                </div>
+
+                <p>.flex-wrap-reverse</p>
+                <div class="contenedor d-flex flex-wrap-reverse">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
             </div>
         </div>
 
         <div class="row my-4">
             <div class="col">
-                <h4>Direccion</h4>
+                <h4>Order</h4>
                 <hr>
-                <p>.flex-row</p>
-                <div class="contenedor d-flex flex-row">
-                    <div>Caja 1</div>
-                    <div>Caja 2</div>
-                    <div>Caja 3</div>
-                </div>
 
-                <p>.flex-row-reverse</p>
-                <div class="contenedor d-flex flex-row-reverse">
-                    <div>Caja 1</div>
-                    <div>Caja 2</div>
-                    <div>Caja 3</div>
+                <div class="contenedor d-flex">
+                    <div class="order-3">Caja 1</div>
+                    <div class="order-2">Caja 2</div>
+                    <div class="order-1">Caja 3</div>
                 </div>
-
-                <p>.flex-column</p>
-                <div class="contenedor d-flex flex-column">
-                    <div>Caja 1</div>
-                    <div>Caja 2</div>
-                    <div>Caja 3</div>
-                </div>
-
-                <p>.flex-column-reverse</p>
-                <div class="contenedor d-flex flex-column-reverse">
-                    <div>Caja 1</div>
-                    <div>Caja 2</div>
-                    <div>Caja 3</div>
-                </div>
-
             </div>
         </div>
 
         <div class="row my-4">
             <div class="col">
-                <h4>Justify Content</h4>
+                <h4>Align Content</h4>
                 <hr>
-                
-                <p>.justify-content-start</p>
-                <div class="contenedor d-flex justify-content-start">
+
+                <p>.align-content-start</p>
+                <div class="contenedor d-flex flex-wrap align-content-start" style="height:400px">
                     <div>Caja 1</div>
                     <div>Caja 2</div>
                     <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
 
-                <p>.justify-content-center</p>
-                <div class="contenedor d-flex justify-content-center">
+                <p>.align-content-center</p>
+                <div class="contenedor d-flex flex-wrap align-content-center" style="height:400px">
                     <div>Caja 1</div>
                     <div>Caja 2</div>
                     <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
 
-                <p>.justify-content-end</p>
-                <div class="contenedor d-flex justify-content-end">
+                <p>.align-content-end</p>
+                <div class="contenedor d-flex flex-wrap align-content-end" style="height:400px">
                     <div>Caja 1</div>
                     <div>Caja 2</div>
                     <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
 
-                <p>.justify-content-between</p>
-                <div class="contenedor d-flex justify-content-between">
+                <p>.align-content-between</p>
+                <div class="contenedor d-flex flex-wrap align-content-between" style="height:400px">
                     <div>Caja 1</div>
                     <div>Caja 2</div>
                     <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
 
-                <p>.justify-content-around</p>
-                <div class="contenedor d-flex justify-content-around">
+                <p>.align-content-around</p>
+                <div class="contenedor d-flex flex-wrap align-content-around" style="height:400px">
                     <div>Caja 1</div>
                     <div>Caja 2</div>
                     <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
                 </div>
 
+                <p>.align-content-stretch</p>
+                <div class="contenedor d-flex flex-wrap align-content-stretch" style="height:400px">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
+                </div>
             </div>
         </div>
     </div>
