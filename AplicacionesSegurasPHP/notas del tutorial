@@ -9,3 +9,82 @@ Los comentarios en PHP son con #
 Arreglos:
 $colores = array("azul","Celeste"); (Se Crean con la funcion array);
 Para visualizarlos debemos mostrarlos por el indice EJ: $colores[0];
+
+Declaraciones y llamadas:
+#variable numerica
+$numero = 5;
+#variable Texto
+$palabra = "Palabra";
+#Variable boleana
+$boleana = true;
+#Variables de tipo Arreglo
+$colores = array("azul","Celeste"); / $colores[0];
+#Variables arreglo con propiedades(Asociativo)
+$verduras = array("verdura1"=>"Lechuga","verdura2"=>"Cebolla"); / $verduras['verdura1'];
+#variables Objeto
+$frutas = (object)["fruta1"=>"pera","fruta2"=>"manzana"]; / $frutas->fruta1;
+
+var_dump()
+Nos muestra el tipo de variable y su valor
+Ejemplo:
+var_dump($numero);
+
+---------------------------------------------------------------------------------------
+03 Funciones
+
+#funciones sin parametros
+function saludo(){
+    echo "Hola<br>";
+}
+saludo();
+
+#funciones con parametros
+function despedida($adios){
+    echo $adios."<br>";
+}
+despedida("chau");
+
+#funciones con retorno
+function retorno($retornar){
+    return $retornar;
+}
+echo retorno("Retornar");
+-------------------------------------------------------------------------------------------
+04 Condicionales y Ciclos
+Condicional IF
+if($a > $b){
+    echo "a es mayor que b";
+}elseif($a == $b){
+    echo "a es igual a b";
+}else{
+    echo "a es menor que b";
+}
+
+Condicional Switch
+switch($dia){
+    case 'sabado':
+    echo "Voy a estudiar PHP";
+    break;
+    default:
+    echo "Voy a la universidad";
+    break;
+}
+
+Ciclo While
+$n = 1;
+while($n < 5){
+    echo $n;
+    $n++;
+}
+
+Ciclo Do While
+$p = 1;
+do{
+    echo $p;
+    $p++;
+}while($p <=5);
+
+Ciclo For
+for($i = 0; $i <= 5; $i++){
+    echo $i;
+}

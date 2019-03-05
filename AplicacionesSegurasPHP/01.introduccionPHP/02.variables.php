@@ -12,7 +12,7 @@ $boleana = true;
 echo "Esto es una variable boleana: ".$boleana;
 echo "<br><br>";
 #Variables de tipo Arreglo
-$colores = array();
+$colores = array("Azul","Celeste");
 echo "Esto es una variable arreglo: ".$colores[0];
 echo "<br><br>";
 #Variables arreglo con propiedades(Asociativo)
