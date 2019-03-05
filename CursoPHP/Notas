@@ -1,0 +1,17 @@
+Formularios
+Clase 41
+El submit envia los datos
+Se diferencian los input por el atributo name y el valor que toma es el del atributo value de la etiqueta HTML
+
+Clase 42
+Metodo POST
+Se envian todos los datos del formulario a un array llamado $_POST
+$nombre = $_POST['nombre'];
+El metodo POST envio los datos por detras del formulario, es decir que no muestra por la URL los datos que esta enviando (si lo hace el metodo GET). El metodo POST nos permite enviar archivos y se usa cuando se envia informacion sensibleq ue no queremos que se vea en pantalla.
+
+Clase 43
+Metodo GET
+Nos permite recibir toda la informacion por URL
+Solo se usa cuando queremos enviar informacion y mostrarla
+NUNCA SE USA CON CONTRASEÑAS Y ARCHIVOS
+$nombre = $_GET['nombre'];
