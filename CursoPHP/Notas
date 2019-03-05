@@ -15,3 +15,11 @@ Nos permite recibir toda la informacion por URL
 Solo se usa cuando queremos enviar informacion y mostrarla
 NUNCA SE USA CON CONTRASEÑAS Y ARCHIVOS
 $nombre = $_GET['nombre'];
+
+Clase 44
+Enviando datos a la misma pagina
+-Si dejamos el campo la propiedad action vacia del form se envian a la misma pagina
+<form action = ""></form>(No es recomendable por compatibilidad)
+-Haciendo referencia al mismo archivo desde action
+<form action="index.php"></form>
+-Usar variable super global
