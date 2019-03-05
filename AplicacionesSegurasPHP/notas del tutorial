@@ -1,0 +1,11 @@
+01 Sintaxis
+print; (Nos permite imprimir 1 cadena de caracters)
+echo; (Nos permite imprimir multiples lineas separadas por coma)
+-----------------------------------------------------------------------------------
+02 Variables
+Siempre comienzan con el signo $
+$numero = 5;
+Los comentarios en PHP son con #
+Arreglos:
+$colores = array("azul","Celeste"); (Se Crean con la funcion array);
+Para visualizarlos debemos mostrarlos por el indice EJ: $colores[0];
