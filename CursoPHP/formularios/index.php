@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="recibe.php" method="get">
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="get">
         <input type="text" name="nombre" placeholder="Nombre: " id="">
         <br>
         <label for="hombre">Hombre</label>

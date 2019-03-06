@@ -2,20 +2,20 @@ Formularios
 Clase 41
 El submit envia los datos
 Se diferencian los input por el atributo name y el valor que toma es el del atributo value de la etiqueta HTML
-
+-------------------------------------------------------------------------------------------------------------
 Clase 42
 Metodo POST
 Se envian todos los datos del formulario a un array llamado $_POST
 $nombre = $_POST['nombre'];
 El metodo POST envio los datos por detras del formulario, es decir que no muestra por la URL los datos que esta enviando (si lo hace el metodo GET). El metodo POST nos permite enviar archivos y se usa cuando se envia informacion sensibleq ue no queremos que se vea en pantalla.
-
+--------------------------------------------------------------------------------------------------------------
 Clase 43
 Metodo GET
 Nos permite recibir toda la informacion por URL
 Solo se usa cuando queremos enviar informacion y mostrarla
 NUNCA SE USA CON CONTRASEÑAS Y ARCHIVOS
 $nombre = $_GET['nombre'];
-
+-----------------------------------------------------------------------------------------------------------------
 Clase 44
 Enviando datos a la misma pagina
 -Si dejamos el campo la propiedad action vacia del form se envian a la misma pagina
@@ -23,3 +23,55 @@ Enviando datos a la misma pagina
 -Haciendo referencia al mismo archivo desde action
 <form action="index.php"></form>
 -Usar variable super global
+Ejemplo
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>"></form>
+------------------------------------------------------------------------------------------------------------------
+Clase 45
+Validar como se han enviado los datos
+1 Metodo con la variable Global $_SERVER:
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        echo "Los datos se enviaron por GET";
+    }else{
+        echo "Los datos se enviaron por POST";
+    }
+
+2 Metodo poniendole nombre al submit
+if(isset($_POST['nombreDelSubmit'])){
+    echo "Se han enviado los datos correctamente";
+}
+------------------------------------------------------------------------------------------------------------------
+Clase 46
+Validando un formulario
+empty(); devuelve true o false si esta vacia la variable
+trim(); Saca los espacion en blanco al inicio y al final de la cadena
+htmlspecialchars(); Transforma los caracteres especiales en entidades html
+stripslashes(); quita las barras para que no pueda inyectarse codigo
+filter_var($variable,FILTER_SANITIZE_STRING); remueve los simbolos y limpia el string
+Ejemplo:
+<?php
+$errores = "";
+
+if(isset($_POST['submit'])){
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    if(!empty($nombre)){
+        $nombre = trim($nombre);
+        $nombre = htmlspecialchars($nombre);
+        $nombre = stripslashes($nombre);
+        $nombre = filter_var($nombre,FILTER_SANITIZE_STRING);
+        echo "Tu nombre es: ".$nombre;
+    }else{
+        $errores .= " Por favor agregue el nombre<br>";
+    }
+
+    if(!empty($correo)){
+        $correo = filter_var($correo,FILTER_SANITIZE_EMAIL);
+        if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
+            $errores.="Por favor ingresa un mail valido<br>";
+        }
+    }else{
+        $errores.="Por favor agrega el correo<br>";
+    }
+}
+?>
+-------------------------------------------------------------------------------------------------------------------------
