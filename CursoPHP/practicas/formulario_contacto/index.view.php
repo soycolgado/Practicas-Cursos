@@ -12,8 +12,8 @@
 <body>
     <div class="wrap">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" value="" id="nombre" class="form-control">
-            <input type="text" name="correo" id="correo" placeholder="Correo:" value="" class="form-control">
+            <input type="text" name="nombre" placeholder="Nombre" value="<?php if(!$enviado && isset($nombre)){echo $nombre;}?>" id="nombre" class="form-control">
+            <input type="text" name="correo" id="correo" placeholder="Correo:" value="<?php if(!$enviado && isset($correo)){echo $correo;}?>" class="form-control">
             <textarea name="mensaje" id="mensaje" class="form-control" placeholder="Mensaje"></textarea>
             <?php if(!empty($errores)):?>
             <div class="alert error" role="alert">

@@ -23,6 +23,28 @@ if(isset($_POST['submit'])){
     }else{
         $errores .= "Por favor ingrese un Mail <br>";
     }
+
+    if(!empty($mensaje)){
+        $mensaje = htmlspecialchars($mensaje);
+        $mensaje = trim($mensaje);
+        $mensaje = stripslashes($mensaje);
+
+
+    }else{
+        $errores.= "Por favor ingrese un mensaje<br>";
+    }
+
+    if(!$errores){
+        $enviar_a="tucorreo@hotmail.com";
+        $asunto = "mensaje enviado desde miPagina";
+        $mensaje_preparado = "De: ".$nombre."\n";
+        $mensaje_preparado.= "Correo: ".$correo."\n";
+        $mensaje_preparado.="Mensaje: ".$mensaje;
+        mail($enviar_a,$asunto,$mensaje_preparado);
+        $enviado = true;
+    }
+
+
 }
 
 require('index.view.php');

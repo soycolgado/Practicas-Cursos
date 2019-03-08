@@ -82,3 +82,26 @@ $nombre = isset($_GET['nombre']) ? $_GET['nombre'] : 'Anonimo';
 echo $nombre;
 Forma nuevo con operador de fusion de null
 $nombre = $_GET['nombre'] ?? 'Anonimo'; Si $_GET['nombre'] es null asigna Anonimo
+
+----------------------------------------------------------------------------------------
+Funcion mail
+mail('direccion','asunto','Mensaje');
+
+-----------------------------------------------------------------------------------------
+Clase 52 
+Programacion orientada a objetos
+
+Clase = plantilla de la que se van a crear objetos.
+Objetos = representacion de la plantilla.
+
+class Clase{
+    Propiedades;
+    Metodos;
+}
+
+para acceder a propiedades:
+$objeto->propiedad = 'Valor';
+para usar metodos:
+$objeto->metodo();
+se puede usar:
+echo $objeto->propiedad;
