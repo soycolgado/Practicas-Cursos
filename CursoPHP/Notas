@@ -105,3 +105,15 @@ para usar metodos:
 $objeto->metodo();
 se puede usar:
 echo $objeto->propiedad;
+
+---------------------------------------------------------------------------------------------
+Clase 53
+Palabra reservada this
+this hacer referencia a la propiedad o metodo de la Clase
+EJ:
+$this->nombre / $this->mostrarInfo
+
+---------------------------------------------------------------------------------------------
+Clase 54
+Metodo Constructor
+Metodo que se ejecuta automaticamente cuando instanciamos un objeto
