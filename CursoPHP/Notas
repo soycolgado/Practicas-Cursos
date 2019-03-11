@@ -117,3 +117,16 @@ $this->nombre / $this->mostrarInfo
 Clase 54
 Metodo Constructor
 Metodo que se ejecuta automaticamente cuando instanciamos un objeto
+
+--------------------------------------------------------------------------------------------
+Clase 55
+Herencia
+Es pasar las propiedades y metodos de una clase padres a una hijo 
+con la palabra clave extends decimos que queremos heredar los atributos y metodos de otra Clase
+Para hacer un nuevo constructor y heredar las propiedades del padre podemos usar parent::__construct($nombre,$edad,$pais)
+--------------------------------------------------------------------------------------------
+Clase 56
+Scope
+public: Se puede acceder desde afuera de la clase
+protected: Se puede acceder solamente desde dentro de la clase y clases que heredaron
+private: Solo se puede acceder desde dentro de la clase que lo creo(No desde las que heredan)
