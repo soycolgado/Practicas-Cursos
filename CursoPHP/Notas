@@ -130,3 +130,16 @@ Scope
 public: Se puede acceder desde afuera de la clase
 protected: Se puede acceder solamente desde dentro de la clase y clases que heredaron
 private: Solo se puede acceder desde dentro de la clase que lo creo(No desde las que heredan)
+
+------------------------------------------------------------------------------------------------
+Clase 57
+Clases Abstractas
+Son una forma de proteger toda nuestra clase
+No podemos acceder a una clase abstracta a menos que la heredemos
+abstract class Persona{
+}
+
+------------------------------------------------------------------------------------------------
+Clase 58
+Static
+Nos permite acceder a propiedades y metodos sin instanciarlos

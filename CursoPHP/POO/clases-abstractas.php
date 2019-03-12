@@ -1,6 +1,6 @@
 <?php
-class Persona{
-    abstract public function saludo(){
+abstract class Persona{
+    public function saludo(){
         return 'Hola';
     }
 }
@@ -10,5 +10,5 @@ class Estudiante extends Persona{
 }
 
 $nestor = new Estudiante();
-echo $nestor->saludo();
+echo $nestor->saludo();s
 ?>
