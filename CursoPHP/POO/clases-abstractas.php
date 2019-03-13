@@ -10,5 +10,5 @@ class Estudiante extends Persona{
 }
 
 $nestor = new Estudiante();
-echo $nestor->saludo();s
+echo $nestor->saludo();
 ?>

@@ -176,3 +176,17 @@ Para borrar la cookie se usa una fecha que haya expirado Ejemplo:
 setcookie('nombre','valor',time()-1,'/');
 En las cookies solo se puede guardar hasta 4mb de informacion
 Usar htmlspecialchars porque son faciles de acceder
+----------------------------------------------------------------------------------------------------------
+Clase 64
+Comando Sql por consola
+Para iniciar sql hay que ir hasta el directorio y poner mysql -u root -p
+show databases (Muestra las bases de datos)
+
+Clase  65
+Creacion de bases de datos y tablas
+CREATE DATABASE nombre_base; (Crear base de datos)
+USE nomber_base; (Nos permite trabajar sobre esa base de datos)
+Cuando se crea una tabla tambien se crean las columnas Ejemplo
+CREATE TABLE usuarios(id INT AUTO_INCREMENT, nombre VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY(id))
+SHOW TABLES; nos muestra las tablas
+DESCRIBE nombreTabla; Muestra como esta compuesta la tabla
