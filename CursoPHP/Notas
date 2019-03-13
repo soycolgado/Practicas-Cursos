@@ -143,3 +143,36 @@ abstract class Persona{
 Clase 58
 Static
 Nos permite acceder a propiedades y metodos sin instanciarlos
+Ejemplo:
+class Persona{
+    public static $dia = '13 de Septiembre';
+
+    public function saludo(){
+        return 'Hola, buen dia';
+    }
+}
+
+echo Persona::$dia;
+----------------------------------------------------------------------------------------------------
+Clase 59
+Encadenamiento de metodos
+Se puede encadenar metodos en PHP. Las funciones que se van a encadenar deben terminar con return $this
+Para encadenar: $nestor->mostrarNombre()->mostrarCorreo();
+Ejemplo:
+----------------------------------------------------------------------------------------------------
+Clase 60
+Sesiones
+Son variables que pueden ser usadas en distintas pestañas
+session_start(); va en todas las paginas que usen variables de tipo session
+$_SESSION['nombre'] = 'nombre'; Declaracion de la session
+session_destroy(); Elimina las sessiones creadas
+Se destruyen al cerrar el navegador
+--------------------------------------------------------------------------------------------------------
+Clase 61
+Cookies
+Variables que se guardan en la PC del usuario y son utilizadas cuando ingresa a la pagina 
+Inicializacion setcookie('nombre','valor','tiempo','/');
+Para borrar la cookie se usa una fecha que haya expirado Ejemplo:
+setcookie('nombre','valor',time()-1,'/');
+En las cookies solo se puede guardar hasta 4mb de informacion
+Usar htmlspecialchars porque son faciles de acceder
