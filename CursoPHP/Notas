@@ -177,12 +177,12 @@ setcookie('nombre','valor',time()-1,'/');
 En las cookies solo se puede guardar hasta 4mb de informacion
 Usar htmlspecialchars porque son faciles de acceder
 ----------------------------------------------------------------------------------------------------------
-Clase 64
+Clase 63
 Comando Sql por consola
 Para iniciar sql hay que ir hasta el directorio y poner mysql -u root -p
 show databases (Muestra las bases de datos)
 
-Clase  65
+Clase  64
 Creacion de bases de datos y tablas
 CREATE DATABASE nombre_base; (Crear base de datos)
 USE nomber_base; (Nos permite trabajar sobre esa base de datos)
@@ -190,3 +190,42 @@ Cuando se crea una tabla tambien se crean las columnas Ejemplo
 CREATE TABLE usuarios(id INT AUTO_INCREMENT, nombre VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, PRIMARY KEY(id))
 SHOW TABLES; nos muestra las tablas
 DESCRIBE nombreTabla; Muestra como esta compuesta la tabla
+
+Clase 65
+Ingresar registros a una base de datos
+1era Forma
+INSERT INTO usuarios VALUES(null,'nombre','correo@correo.com'); 
+2da Forma
+INSERT INTO usuarios(nombre,correo)VALUES('Flavio','Correo@correo.com');
+
+----------------------------------------------------------------------------------------------------------
+Clase 66
+Modificar informacion de la base de datos
+UPDATE usuarios SET nombre = 'Nestor',email = 'Nestor@gmail.com' WHERE id = 1;
+
+----------------------------------------------------------------------------------------------------------
+Clase 67
+Filtrar informacion de una tabla
+Ejemplo 1
+SELECT id, nombre FROM usuarios;
+LIKE Significa sea como, se usa con cadenas de texto cuando no es una igualdad estricta
+Ejemplo : SELECT nombre FROM usuarios WHERE nombre LIKE 'c%'; (Nos listaria los nombres que empiecen con la letra c)
+
+ORDENAMIENTO
+sentencia ORDER BY
+Ejemplo 1:
+SELECT * FROM usuarios ORDER BY nombre ASC;
+Ejemplo 2:
+SELECT * FROM usuarios ORDER BY nombre DESC;
+
+LIMITAR CANTIDAD DE REGISTROS QUE SE MUESTRAN
+Ejemplo 1
+SELECT * FROM usuarios LIMIT 1;
+Ejemplo 2
+SELECT * FROM usuarios LIMIT 1, 2; esto hace que a partir del registro 1 muestre 2 valores.
+
+
+----------------------------------------------------------------------------------------------------
+Clase 68
+Borrar registros
+DELETE FROM usuarios WHERE ID = 2;
