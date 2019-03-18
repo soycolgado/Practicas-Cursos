@@ -229,3 +229,68 @@ SELECT * FROM usuarios LIMIT 1, 2; esto hace que a partir del registro 1 muestre
 Clase 68
 Borrar registros
 DELETE FROM usuarios WHERE ID = 2;
+--------------------------------------------------------------------------------------------------
+
+Clase 72 
+PDO
+Conexion por medio de PDO
+try {
+    $conexion = new PDO('mysql:host=localhost;dbname=prueba_datos','root','','');
+} catch (PDOException $e) {
+    'Error: '.$e->getMessage();
+}
+
+--------------------------------------------------------------------------------------------------
+Clase 73
+Realizar consultas con PDO
+1era Forma(se desaconseja)
+$resultados = $conexion->query("INSERT INTO usuarios(nombre)VALUES('Flavio')");
+$resultados = $conexion->query("SELECT * FROM usuarios WHERE id= $id");
+
+--------------------------------------------------------------------------------------------------
+Clase 74 
+Prepared Statements
+2da Forma de consulta(Recomendada)
+
+$statement = $conexion->prepare('SELECT * FROM cursos WHERE ID= :id');(Se usa :id como un placeholder, el valor se da en execute)
+
+$statement->execute(array(':id' => 5)); (Ejecutamos la consulta pasando como parametro un vectos asociativo con el placeholder)
+
+Hay 2 formas de mostrar la consulta(Solo trae un valor)
+$resultados = $statement->fetch(); (Guardamos el resultado de la consulta en $resultados)
+echo $resultados['nombre'] (Imprimimos el resultado)
+
+Traer mas de un valor
+$resultados = $statement->fetchAll();
+foreach($resultados as $fila){
+    echo $fila['nombre'].'<br>';
+}
+---------------------------------------------------------------------------------------------------------------
+Clase 75
+Conexion con Mysqli
+$conexion = new mysqli('localhost','root','','prueba_datos_nuevo');
+if($conexion->errno){
+    echo "Lo siento ha habido un error en la base de datos";
+}
+---------------------------------------------------------------------------------------------------------------
+Clase 76
+Consultas con Mysqli
+$sql = 'SELECT * FROM usuarios';
+        $resultado = $conexion->query($sql);
+        if($resultado->num_rows){
+            while($fila = $resultado->fetch_assoc())
+            echo $fila['nombre'].'<br>';
+        }else{
+            "No existen registros en su tabla";
+        }
+    --------------------------------------------------------------------------------------------------------------
+Clase 77
+Insertar datos mysqli
+$sql = "INSERT INTO usuarios(nombre,edad) VALUES('Nestor2077',50)";
+        $conexion->query($sql);
+        if($conexion->affected_rows >= 1){
+            echo 'Filas agregadas: '.$conexion->affected_rows;
+        }
+------------------------------------------------------------------------------------------------------------------
+Clase 78
+Prepared Statements mysqli
