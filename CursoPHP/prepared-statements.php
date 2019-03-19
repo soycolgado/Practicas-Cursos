@@ -20,6 +20,8 @@
          $statement->execute();
          if($conexion->affected_rows >= 1){
              echo 'Filas agregadas: '.$conexion->affected_rows;
+         }else{
+             echo 'No se ha agregado nada';
          }
      }
 
