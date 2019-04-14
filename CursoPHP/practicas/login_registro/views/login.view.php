@@ -20,6 +20,13 @@
                 <i class="icono izquierda fa fa-lock"></i><input type="password" name="password" id="password" class="password_btn" placeholder="Contraseña">
                 <i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
             </div>
+            <?php if(!empty($errores)):?>
+                <div class="error">
+                    <ul>
+                        <?php echo $errores;?>
+                    </ul>
+                </div>
+           <?php endif;?> 
         </form>
 
         <p class="texto-registrate">

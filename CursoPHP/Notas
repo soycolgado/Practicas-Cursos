@@ -294,3 +294,22 @@ $sql = "INSERT INTO usuarios(nombre,edad) VALUES('Nestor2077',50)";
 ------------------------------------------------------------------------------------------------------------------
 Clase 78
 Prepared Statements mysqli
+
+---------------------------------------------------------------------------------------------------
+file_exists('documento.txt'); Verificamos la existencia de un archivo
+file_get_contents('documento.txt'); Leemos lo que esta en el archivo txt
+file_put_contents('documento.txt','Creo que soy el mejor del mundo'); Sobreescribe el archivo
+file_put_contents('documento.txt','Creo que soy el mejor del mundo',FILE_APPEND); Agrega info sin sobreescribir
+file('documento.txt')Transforma cada linea en un arreglo
+
+---------------------------------------------------------------------------------------------------
+Clase 96 Funciones utiles con rutas
+
+patchinfo(); devuelve informacion de un archivo especifico; 
+glob(); devuelve todos los archivos con una extension o condicion particular 
+Ejemplo 
+$resultado = glob(*.php);
+Ejemplo con multiples extensiones:
+$resultado = glob('*.{html,php,txt}',GLOB_BRACE);
+basename('carpeta1/carpeta2/archivo.php'); Se desase de la ruta y nos deja solamente el nombre del archivo
+dirname('carpeta1/carpeta2/archivo.php'); Nos devuelve los directorios padres de la ruta;
