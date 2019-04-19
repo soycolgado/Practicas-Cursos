@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Galeria</title>
 </head>
+
 <body>
     <header>
         <div class="contenedor">
@@ -18,49 +20,20 @@
     </header>
     <section class="fotos">
         <div class="contenedor">
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/1.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/2.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/3.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/4.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/5.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/6.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/7.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="">
-                    <img src="imagenes/8.jpg" alt="">
-                </a>
-            </div>
+            <?php foreach ($fotos as $foto) : ?>
+                <div class="thumb">
+                    <a href="foto.php?id=<?php echo $foto['id']; ?>">
+                        <img src="fotos/<?php echo $foto['imagen']; ?>" alt="">
+                    </a>
+                </div>
+            <?php endforeach; ?>
             <div class="paginacion">
-                <a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina anterior</a>
-                <a href="#" class="derecha">Pagina siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php if ($pagina_actual > 1) : ?>
+                    <a href="index.php?p=<?php echo $pagina_actual - 1;?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina anterior</a>
+                <?php endif; ?>
+                <?php if ($pagina_actual != $total_paginas) : ?>
+                    <a href="index.php?p=<?php echo $pagina_actual + 1;?>" class="derecha">Pagina siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -68,4 +41,5 @@
         <p class="copyright">Galeria creada por Nestor Bardel - BlackMamba</p>
     </footer>
 </body>
+
 </html>
