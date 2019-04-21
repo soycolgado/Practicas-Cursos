@@ -1,7 +1,7 @@
 <?php
 define('RUTA', 'http://localhost/GitHub/Practicas-Cursos/CursoPHP/practicas/blog/');
 
-$db_config = array(
+$bd_config = array(
     'basedatos' => 'blog_practica',
     'usuario' => 'root',
     'pass' => ''

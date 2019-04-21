@@ -1,8 +1,7 @@
 <?php
-    // require 'admin/config.php';
-    function conexion ($db_config){
+    function conexion ($bd_config){
         try{
-            $conexion = new PDO("mysql:host=localhost;dbname=".$db_config['basedatos'],$db_config['usuario'],$db_config['pass']);
+            $conexion = new PDO("mysql:host=localhost;dbname=".$bd_config['basedatos'],$bd_config['usuario'],$bd_config['pass']);
             return $conexion;
         }catch(PDOException $e){
             return false;
@@ -22,6 +21,9 @@
 
     function obtener_post($post_por_pagina,$conexion){
         $inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio,$post_por_pagina");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
     }
 
 ?>
