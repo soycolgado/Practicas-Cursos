@@ -1,5 +1,5 @@
 <?php
-define('RUTA', 'http://localhost/GitHub/Practicas-Cursos/CursoPHP/practicas/blog/');
+define('RUTA', 'http://localhost/GitHub/Practicas-Cursos/CursoPHP/practicas/blog');
 
 $bd_config = array(
     'basedatos' => 'blog_practica',

@@ -2,7 +2,8 @@
 require 'header.php';
 ?>
 <div class="contenedor">
-    <?php foreach ($posts as $post) : ?>
+    <h2><?php echo $titulo;?></h2>
+    <?php foreach ($resultados as $post) : ?>
         <div class="post">
             <article>
                 <h2 class="titulo"><a href="single.php?id=<?php $post['id'];?>"><?php echo $post['titulo'];?></a></h2>

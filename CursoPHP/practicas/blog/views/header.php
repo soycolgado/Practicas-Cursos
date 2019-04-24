@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/bb21b3a7e0.css">
-    <link rel="stylesheet" href="<?php echo RUTA;?>css/estilos.css">
+    <link rel="stylesheet" href="<?php echo RUTA;?>/css/estilos.css">
     <title>Blog</title>
 </head>
 <body>
