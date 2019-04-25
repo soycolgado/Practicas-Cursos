@@ -1,7 +1,16 @@
-var btn = document.getElementById('btn_cargar_usuarios');
+var btn_cargar = document.getElementById('btn_cargar_usuarios');
+var error_box = document.getElementById('error_box');
+var tabla = document.getElementById('tabla');
 var loader = document.getElementById('loader');
 
-btn.addEventListener('click',function(){
+var usuario_nombre,
+    usuario_edad,
+    usuario_pais,
+    usuario_correo;
+
+function cargarUsuarios(){
+    tabla.innerHTML = '<tr><th>ID</th><th>Nombre</th><th>Edad</th><th>Pais</th><th>Correo</th></tr>';
+
     var peticion = new XMLHttpRequest();
     peticion.open('GET','php/leer-datos.php');
 
@@ -9,17 +18,19 @@ btn.addEventListener('click',function(){
 
     peticion.onload = function(){
         var datos = JSON.parse(peticion.responseText);
-        
-       for(var f = 0; f < 5; f++){
-           var elemento = document.createElement("tr");
-           elemento.innerHTML += "<td>"+datos[f].id+"</td>";
+        if(datos.error){
+            error_box.classList.add('active');
+        }else{
+            for(var f = 0; f < datos.length; f++){
+                var elemento = document.createElement('tr');
+                elemento.innerHTML += "<td>"+datos[f].ID+"</td>";
            elemento.innerHTML += "<td>"+datos[f].nombre+"</td>";
            elemento.innerHTML += "<td>"+datos[f].edad+"</td>";
            elemento.innerHTML += "<td>"+datos[f].pais+"</td>";
            elemento.innerHTML += "<td>"+datos[f].correo+"</td>";
-           var tabla = document.getElementById('tabla');
            tabla.appendChild(elemento);
-       }
+            }
+        }
     }
 
     peticion.onreadystatechange = function(){
@@ -29,4 +40,6 @@ btn.addEventListener('click',function(){
     }
 
     peticion.send();
-});
+}
+
+btn_cargar.addEventListener('click',cargarUsuarios);
