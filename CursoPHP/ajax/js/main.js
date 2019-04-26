@@ -42,4 +42,68 @@ function cargarUsuarios(){
     peticion.send();
 }
 
+function agregarUsuarios(e){
+    e.preventDefault();
+    //1
+    var peticion = new XMLHttpRequest();
+    //2
+    peticion.open('POST','php/insertar-usuario.php');
+
+    usuario_nombre = formulario.nombre.value.trim();
+    usuario_edad = parseInt(formulario.edad.value.trim());
+    usuario_pais = formulario.pais.value.trim();
+    usuario_correo = formulario.correo.value.trim();
+    
+    if(formulario_valido()){
+        
+        error_box.classList.remove('active');
+        //3
+        var parametros = "nombre="+usuario_nombre+"&edad="+usuario_edad+"&pais="+usuario_pais+"&correo="+usuario_correo;
+        //4
+        peticion.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+        loader.classList.add('active');
+        //5
+        peticion.onload = function(){
+            
+            cargarUsuarios();
+            formulario.nombre.value = '';
+            formulario.edad.value = '';
+            formulario.pais.value = '';
+            formulario.correo.value = '';
+        }
+        //6
+        peticion.onreadystatechange = function(){
+            if(peticion.readyState == 4 && peticion.status == 200){
+                loader.classList.remove('active');
+                
+            }
+        }
+        //7
+        peticion.send(parametros);
+
+    }else{
+        error_box.classList.add('active');
+        error_box.innerHTML = 'Por favor ingrese correctamente los datos';
+    }
+}
+
 btn_cargar.addEventListener('click',cargarUsuarios);
+
+formulario.addEventListener('submit',function(e){
+    agregarUsuarios(e);
+})
+
+function formulario_valido(){
+    if(usuario_nombre == ''){
+        return false;
+    }else if(isNaN(usuario_edad)){
+        return false;
+    }else if(usuario_pais == ''){
+        return false;
+    }else if(usuario_correo == ''){
+        return false;
+    }
+    
+    return true;
+}
