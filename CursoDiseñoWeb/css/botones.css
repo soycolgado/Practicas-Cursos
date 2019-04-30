@@ -8,19 +8,16 @@ div{
 }
 
 .btn{
-    display: inline-block; 
     background: #32021f;
     color: #fff;
-    font-size: 16px;
     text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
     padding: 15px 20px;
     margin: 0 10px;
 }
 
-.btn:hover{
-    opacity: 0.8;
-}
-
+/* Tamaños */
 .small{
     font-size: 14px;
     padding: 10px 15px;
@@ -41,18 +38,22 @@ div{
     padding: 25px 30px;
 }
 
+.btn:hover{
+    opacity: 0.8;
+}
+
 .azul{
     background: #246eb9;
 }
 
 .verde{
-    background: #4fb500;
+    background: #4fb560;
 }
 
 .naranja{
     background: #f9a03f;
 }
 
-.radius{
-    border-radius: 25px;
+.border-radius{
+    border-radius: 100px;
 }
