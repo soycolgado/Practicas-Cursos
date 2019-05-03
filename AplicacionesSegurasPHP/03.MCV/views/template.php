@@ -51,13 +51,15 @@
 <body>
     <header>
         <h1>LOGOTIPO</h1>
-    </header>
-    <?php include "modules/navegacion.php";?>
-    <section>
+		</header>
 		<?php
-			$mvc = new MvcController();
-			$mvc -> enlacesPaginasController();
+		include "views/modules/navegacion.php";
 		?>
+    <section>
+			<?php
+				$mvc = new MvcController();
+				$mvc -> enlacesPaginasController();
+			?>
     </section>
 </body>
 </html>
