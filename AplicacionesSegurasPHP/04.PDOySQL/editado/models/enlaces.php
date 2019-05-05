@@ -15,8 +15,6 @@ class Paginas{
 
 			$module =  "views/modules/registro.php";
 		
-		}else if($enlaces == "ok"){
-			$module = "views/modules/registro/php";
 		}
 
 		else{
