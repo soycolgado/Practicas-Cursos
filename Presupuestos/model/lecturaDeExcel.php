@@ -10,11 +10,11 @@
 
 <body>
     <?php
-    require_once 'model/conexion.php';
-    require_once 'Classes/PHPExcel.php';
-    require_once 'model/cargarLibro.php';
-    require_once 'model/comparar.php';
-    $archivo = "libro.xlsx";
+    require_once 'conexion.php';
+    require_once '../Classes/PHPExcel.php';
+    require_once 'cargarLibro.php';
+    require_once 'comparar.php';
+    $archivo = "../libro.xlsx";
     $inputFileType = PHPExcel_IOFactory::identify($archivo);
     $objReader = PHPExcel_IOFactory::createReader($inputFileType);
     $objPHPExcel = $objReader->load($archivo);
