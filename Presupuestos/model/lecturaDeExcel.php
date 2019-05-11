@@ -14,14 +14,15 @@
     require_once '../Classes/PHPExcel.php';
     require_once 'cargarLibro.php';
     require_once 'comparar.php';
-    $archivo = "../libro.xlsx";
+    require_once 'borrarLibro.php';
+    $archivo = "../recursos/libro.xlsx";
     $inputFileType = PHPExcel_IOFactory::identify($archivo);
     $objReader = PHPExcel_IOFactory::createReader($inputFileType);
     $objPHPExcel = $objReader->load($archivo);
     $sheet = $objPHPExcel->getSheet(0);
     $highestRow = $sheet->getHighestRow();
     $highestColumn = $sheet->getHighestColumn();
-
+    Borrar::borrarLibro();
     //Inicializacion de una variable que va a contener el nombre de la tabla
     
     //Ciclo que recorre las filas
