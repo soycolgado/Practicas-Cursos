@@ -21,12 +21,7 @@
 
         <section class="seleccion">
             <article>
-                <info-group class="procesador">
-                    <select name="procesador" id="procesador">
-                        <option value="0">Procesador...</option>
-                    </select>
-                    
-                </info-group>
+                
             </article>
         </section>
     </div>
