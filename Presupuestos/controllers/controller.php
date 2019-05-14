@@ -10,6 +10,8 @@ class MvcController{
         }else{
             $enlace = 'index';
         }
+
+        $respuesta = 
     }
 }
 ?>
