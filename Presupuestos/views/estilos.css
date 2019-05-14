@@ -42,3 +42,26 @@ nav .menu a:hover{
     background: #0582CA;
 }
 
+.contenido{
+    color: #fff;
+}
+
+.thumb{
+    width: 150px;
+    display: inline-block;
+    margin: 20px;
+ 
+}
+
+.thumb img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    opacity: 0.5;
+    
+}
+
+.thumb img:hover{
+    opacity: 1;
+}
+
