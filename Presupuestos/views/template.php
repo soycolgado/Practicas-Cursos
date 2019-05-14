@@ -14,7 +14,10 @@
                 include 'modules/navegacion.php';
             ?>
         </header>
-
+        <?php
+            $mvc = new MvcController();
+            $mvc -> enlacesPaginasController();
+        ?>
         
     </div>
 </body>

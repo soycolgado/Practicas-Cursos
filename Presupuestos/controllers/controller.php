@@ -1,17 +1,20 @@
 <?php
 class MvcController{
+
     public function pagina(){
         include 'views/template.php';
     }
 
-    public function enlacesPaginaController(){
-        $(isset($_GET['action'])){
-            $enlace = $_GET['action'];
+    public function enlacesPaginasController(){
+        if(isset($_GET['action'])){
+            $enlaces = $_GET['action'];
         }else{
-            $enlace = 'index';
+            $enlaces = 'index';
         }
 
-        $respuesta = 
+        $respuesta = Paginas::enlacesPaginasModel($enlaces);
+        include $respuesta;
     }
+
 }
 ?>
