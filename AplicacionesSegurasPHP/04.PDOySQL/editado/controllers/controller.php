@@ -66,6 +66,20 @@ class MvcController{
 		}
 	}
 
+	#VISTA DE USUARIOS
+	public function vistaUsuariosController(){
+		$respuesta = Datos::vistaUsuariosModel("usuarios");
+		foreach($respuesta as $fila){
+			echo '<tr>
+					<td>'.$fila["usuario"].'</td>
+					<td>'.$fila["password"].'</td>
+					<td>'.$fila["email"].'</td>
+					<td><button>Editar</button></td>
+					<td><button>Borrar</button></td>
+				 </tr>';
+		}
+	}
+
 }
 
 ?>

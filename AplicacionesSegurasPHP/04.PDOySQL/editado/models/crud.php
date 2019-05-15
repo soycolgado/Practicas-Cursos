@@ -24,5 +24,11 @@ class Datos extends Conexion{
         return $stmt->fetch();
     }
 
+    #VISTA USUARIOS
+    static public function vistaUsuariosModel($tabla){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM usuarios");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
 ?>
