@@ -16,6 +16,8 @@ class MvcController{
         include $respuesta;
     }
 
+    //Controlador de botones
+
    
 
 }

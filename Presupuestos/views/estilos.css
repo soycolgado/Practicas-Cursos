@@ -92,10 +92,19 @@ nav .menu a:hover{
 }
 
 .contenido-derecha{
+    width: 50%;
     float: right;
-    background: #fff;
-    width: 55%;
-    height: 100%;
+}
+
+.contenido-derecha .tabla{
+    width: 100%;
+    color: #fff;
+    border-collapse: collapse;
+    
+}
+
+th,tr,td{
+    border-bottom: 1px solid #fff;
 }
 
 

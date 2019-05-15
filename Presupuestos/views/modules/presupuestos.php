@@ -5,7 +5,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/procesador.jpg" alt=""></a>
+                <a href="" id="procesador"><img src="recursos/procesador.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 <p>
@@ -18,7 +18,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/mother.jpg" alt=""></a>
+                <a href="" id="mother"><img src="recursos/mother.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 
@@ -35,7 +35,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/memoria.jpg" alt=""></a>
+                <a href="" id="memoria"><img src="recursos/memoria.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 <p>
@@ -48,7 +48,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/discoHD.jpg" alt=""></a>
+                <a href="" id="disco"><img src="recursos/discoHD.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 
@@ -93,7 +93,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/fuente.jpg" alt=""></a>
+                <a><img src="recursos/fuente.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 <p>
@@ -120,5 +120,14 @@
 </article>
 
 <article class="contenido-derecha">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, autem repellat tenetur sequi consequuntur mollitia quam distinctio quisquam nisi obcaecati, reiciendis at facilis ad neque. Aspernatur eligendi labore iusto accusamus!
+<table class="tabla" id="tabla">
+    <tr>
+        <th>SKU</th>
+        <th>Descripcion</th>
+        <th>Marca</th>
+        <th>Costo</th>
+        <th>Distribuidor</th>
+    </tr>
+    
+</table>
 </article>

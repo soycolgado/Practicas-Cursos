@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="views/estilos.css">
+    
     <title>Armado PC</title>
 </head>
 <body>
@@ -24,4 +25,5 @@
         
     </div>
 </body>
+<script src="controllers/controller.js"></script>
 </html>
