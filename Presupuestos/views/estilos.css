@@ -1,11 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-
+    box-sizing: border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #051923;
 }
 
@@ -16,6 +16,7 @@ body{
 
 header{
     background: #006494;
+    margin-bottom: 25px;
 }
 
 .menu{
@@ -35,7 +36,7 @@ nav .menu a{
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 nav .menu a:hover{
@@ -45,13 +46,22 @@ nav .menu a:hover{
 .contenido{
     color: #fff;
 }
-
-.thumb{
-    width: 150px;
-    display: inline-block;
-    margin: 20px;
+.componente{
+    width: 250px;
+    height: 135px;
+    display:inline-block;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+.componente .thumb{
+    width: 55%;
+    height: 100%;
+    /* display: inline-block; */
+    float: left;
  
 }
+
 
 .thumb img{
     width: 100%;
@@ -64,4 +74,30 @@ nav .menu a:hover{
 .thumb img:hover{
     opacity: 1;
 }
+
+.componente .descripcion{
+    /* display: inline-block; */
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+
+.img-group{
+    /* margin-bottom: 30px; */
+}
+
+.contenido-izquierda{
+    float: left;
+    width: 45%;
+}
+
+.contenido-derecha{
+    float: right;
+    background: #fff;
+    width: 55%;
+    height: 100%;
+}
+
+
+
 
