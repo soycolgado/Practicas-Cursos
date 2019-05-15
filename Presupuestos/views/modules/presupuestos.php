@@ -8,7 +8,7 @@
                 <a href="" id="procesador"><img src="recursos/procesador.jpg" alt=""></a>
             </div>
             <div class="descripcion">
-                <p>
+                <p id="textoProcesador">
                     Seleccione el Procesador
                 </p>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="descripcion">
                 
-                <p>
+                <p id="textoMother">
                     Seleccione el Mother
                 </p>
             </div>
@@ -38,7 +38,7 @@
                 <a href="" id="memoria"><img src="recursos/memoria.jpg" alt=""></a>
             </div>
             <div class="descripcion">
-                <p>
+                <p id="textoMemoria">
                     Seleccione la Memoria
                 </p>
             </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="descripcion">
                 
-                <p>
+                <p id="textoDisco">
                     Seleccione el Disco Mecanico
                 </p>
             </div>
@@ -64,7 +64,7 @@
         <div class="componente">
             
             <div class="thumb">
-                <a href="#"><img src="recursos/discoSSD.jpg" alt=""></a>
+                <a href="" id="disco2"><img src="recursos/discoSSD.jpg" alt=""></a>
             </div>
             <div class="descripcion">
                 <p>
