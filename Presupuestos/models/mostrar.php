@@ -4,7 +4,7 @@ $link = Conexion::conectar();
 // $link = new PDO("mysql:host=localhost;dbname=Pruebas","root","root");
     header("Content-type: application/json; charset=utf-8");
     if(isset($_GET['action'])){
-        if($_GET['action']=="procesador" || $_GET['action']=="mother" || $_GET['action']=="memoria" || $_GET['action']=="disco"){
+        if($_GET['action']=="procesador" || $_GET['action']=="mother" || $_GET['action']=="memoria" || $_GET['action']=="disco" || $_GET['action'] == "vga" ||  $_GET['action'] == "fuente" || $_GET['action'] == "gabinete"){
             $tabla = $_GET['action'];
             
             $link->query("SET NAMES utf8");

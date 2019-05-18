@@ -24,6 +24,9 @@
         </section>
         
     </div>
+    <?php
+        include 'modules/footer.php';   
+    ?>
 </body>
 <script src="controllers/controller.js"></script>
 </html>

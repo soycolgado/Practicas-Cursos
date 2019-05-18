@@ -42,6 +42,10 @@
             $tabla = "memoria";
         }elseif(preg_match("/d..co+/",$descripcion) && (($tipo == "ssd") || (preg_match("/notebook+/",$tipo)) || (preg_match("/pc/",$tipo)) )){
             $tabla = "disco";
+        }elseif(preg_match("/placa de video/",$descripcion)){
+            $tabla = "vga";
+        }elseif(preg_match("/fuente/",$descripcion)){
+            $tabla = "fuente";
         }
         if (!empty($tabla)) {
             
