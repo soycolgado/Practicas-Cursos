@@ -15,18 +15,10 @@ body{
     float: left;
 }
 
-/* .cajaPadre{
-    margin: 20px;
-    background: #2e294e;
-    width: 500px;
-    height: 500px;
-    position: relative;
-} */
-
 .posicionada{
     background: #6695e8;
-    /* position: absolute; */
-    /* right: 0%;
-    top: 0%; */
-    /* float: right; */
+    /* position: fixed;
+    left: 200px;
+    bottom: 100px; */
+    
 }

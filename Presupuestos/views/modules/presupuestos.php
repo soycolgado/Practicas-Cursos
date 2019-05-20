@@ -149,61 +149,19 @@
         <th>PvP</th>
     </tr>
     <tr id="filaProcesador"><td id="skuProcesador"></td><td id="descripcionProcesador"></td><td id="marcaProcesador"></td><td id="costoProcesador"></td><td id="distribuidorProcesador"></td><td id="pvpProcesador"></td></tr>
-    <tr>
-        <th id="skuMother"></th>
-        <th id="descripcionMother"></th>
-        <th id="marcaMother"></th>
-        <th id="costoMother"></th>
-        <th id="distribuidorMother"></th>
-        <th id="pvpMother"></th>
-    </tr>
-    <tr>
-        <th id="skuMemoria"></th>
-        <th id="descripcionMemoria"></th>
-        <th id="marcaMemoria"></th>
-        <th id="costoMemoria"></th>
-        <th id="distribuidorMemoria"></th>
-        <th id="pvpMemoria"></th>
-    </tr>
-    <tr>
-        <th id="skuDisco1"></th>
-        <th id="descripcionDisco1"></th>
-        <th id="marcaDisco1"></th>
-        <th id="costoDisco1"></th>
-        <th id="distribuidorDisco1"></th>
-        <th id="pvpDisco1"></th>
-    </tr>
-    <tr>
-        <th id="skuDisco2"></th>
-        <th id="descripcionDisco2"></th>
-        <th id="marcaDisco2"></th>
-        <th id="costoDisco2"></th>
-        <th id="distribuidorDisco2"></th>
-        <th id="pvpDisco2"></th>
-    </tr>
-    <tr>
-        <th id="skuVga"></th>
-        <th id="descripcionVga"></th>
-        <th id="marcaVga"></th>
-        <th id="costoVga"></th>
-        <th id="distribuidorVga"></th>
-        <th id="pvpVga"></th>
-    </tr>
-    <tr>
-        <th id="skuFuente"></th>
-        <th id="descripcionFuente"></th>
-        <th id="marcaFuente"></th>
-        <th id="costoFuente"></th>
-        <th id="distribuidorFuente"></th>
-        <th id="pvpFuente"></th>
-    </tr>
-    <tr>
-        <th id="skuGabinete"></th>
-        <th id="descripcionGabinete"></th>
-        <th id="marcaGabinete"></th>
-        <th id="costoGabinete"></th>
-        <th id="distribuidorGabinete"></th>
-        <th id="pvpGabinete"></th>
-    </tr>
+
+    <tr id="filaMother"><td id="skuMother"></td><td id="descripcionMother"></td><td id="marcaMother"></td><td id="costoMother"></td><td id="distribuidorMother"></td><td id="pvpMother"></td></tr>
+
+    <tr id="filaMemoria"><td id="skuMemoria"></td><td id="descripcionMemoria"></td><td id="marcaMemoria"></td><td id="costoMemoria"></td><td id="distribuidorMemoria"></td><td id="pvpMemoria"></td></tr>
+
+    <tr id="filaDisco1"><td id="skuDisco1"></th><td id="descripcionDisco1"></th><td id="marcaDisco1"></th><td id="costoDisco1"></th><td id="distribuidorDisco1"></th><td id="pvpDisco1"></th></tr>
+
+    <tr id="filaDisco2"><td id="skuDisco2"></td><td id="descripcionDisco2"></td><td id="marcaDisco2"></td><td id="costoDisco2"></td><td id="distribuidorDisco2"></td><td id="pvpDisco2"></td></tr>
+
+    <tr id="filaVga"><td id="skuVga"></td><td id="descripcionVga"></td><td id="marcaVga"></td><td id="costoVga"></td><td id="distribuidorVga"></td><td id="pvpVga"></td></tr>
+
+    <tr id="filaFuente"><td id="skuFuente"></td><td id="descripcionFuente"></td><td id="marcaFuente"></td><td id="costoFuente"></td><td id="distribuidorFuente"></td><td id="pvpFuente"></td></tr>
+
+    <tr id="filaGabinete"><td id="skuGabinete"></td><td id="descripcionGabinete"></td><td id="marcaGabinete"></td><td id="costoGabinete"></td><td id="distribuidorGabinete"></td><td id="pvpGabinete"></td></tr>
     </table>
 </article>
