@@ -10,13 +10,12 @@
     <button id="btn-detener">Detener</button>
     <script>
         function saludo(){
-            alert('Hola ameo');
+            alert('Hola mundo');
         }
-
         var intervalo = setInterval(saludo,3000);
 
-        var detener = document.getElementById('btn-detener');
-        detener.addEventListener('click',function (){
+        var btn = document.getElementById('btn-detener');
+        btn.addEventListener('click',function(){
             clearInterval(intervalo);
         });
     </script>
