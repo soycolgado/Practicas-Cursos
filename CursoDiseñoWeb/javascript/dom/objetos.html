@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos en Javascript</title>
+</head>
+<body>
+
+    <ul id="lista">
+        <li>aloa</li>
+        <li>aloa</li>
+        <li>aloa</li>
+        <li>aloa</li>
+    </ul>
+    <script>
+
+        var lis = document.getElementsByTagName('li');
+        var padre = lis[0].parentNode;
+        var nuevo = document.createElement('li');
+        var contenido = document.createTextNode('Soy el mas lindu');
+        nuevo.appendChild(contenido);
+        padre.insertBefore(nuevo,lis[1]);
+        // var nestor = {
+        //     nombre: 'Nestor',
+        //     edad: 32,
+        //     pais: 'Argentina',
+        //     bio: function(){
+        //         return 'Esto es un retorno';
+        //     }
+        // };
+
+        // document.write(nestor.bio());
+
+    //     function persona(nombre,edad){
+    //         this.nombre = nombre;
+    //         this.edad = edad;
+    //         function mostrar(){
+    //             return this.nombre;
+    //         }
+    //     }
+
+    //     var nestor = new persona('Flavio',32);
+    //     document.write(nestor.mostrar());
+    // </script>
+</body>
+</html>
