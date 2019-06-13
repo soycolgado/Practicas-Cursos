@@ -8,6 +8,10 @@ body {
     margin-top: 20px;
 }
 
+.imagen img {
+    width: 200px;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
