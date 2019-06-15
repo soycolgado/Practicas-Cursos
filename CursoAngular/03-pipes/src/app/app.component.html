@@ -86,6 +86,17 @@
                 <td>capitalizado:false</td>
                 <td>{{nombre2 | capitalizado:false}}</td>
             </tr>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>contrasena:{{activar}}
+                    <br>
+                    <button type="button" (click)="activar = !activar" class="btn btn-primary">
+                        Activar / Desactivar
+                    </button>
+                </td>
+                <td>{{nombre | contrasena:activar}}</td>
+            </tr>
+
         </tbody>
     </table>
     <h4>Slice ng-For</h4>
