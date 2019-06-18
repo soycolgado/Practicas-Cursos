@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from "./app.routers";
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 
@@ -20,7 +21,8 @@ import { ROUTES } from "./app.routers";
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
