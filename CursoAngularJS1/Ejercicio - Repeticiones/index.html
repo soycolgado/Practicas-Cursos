@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="universidadApp">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>NG-REPEAT - ng-repeat</title>
@@ -20,14 +20,34 @@
     </head>
     <body>
 
-        <div class="container">
+        <div class="container" ng-controller="listadoCtrl">
             <h1>ng-repeat</h1>
             <h4>Manejando repeticiones</h4>
             <hr>
+            <ul>
+            	<li ng-repeat="nombre in listado">{{nombre}}</li>
+            </ul>
 
+            {{listado | json}}
 
-
-
+            <h4>Listado de Profesores</h4>
+            
+            <table class="table table-hover">
+            	<thead>
+            		<tr>
+            			<th>Nombre</th>
+            			<th>Edad</th>
+            			<th>Clase</th>
+            		</tr>
+            	</thead>
+            	<tbody>
+            		<tr ng-repeat="profesor in listadoProfesores.profesores">
+            			<td>{{profesor.nombre}}</td>
+            			<td>{{profesor.edad}}</td>
+            			<td>{{profesor.clase}}</td>
+            		</tr>
+            	</tbody>
+            </table>
         </div><!-- fin del listadoCtrl -->
 
     </body>
