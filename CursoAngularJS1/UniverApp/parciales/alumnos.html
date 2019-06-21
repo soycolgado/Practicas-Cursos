@@ -1,2 +1,25 @@
 <h1>Alumnos</h1>
-<p>Esta es la pagina Alumnos</p>
+<h4>Listado de alumnos en el Sistema</h4>
+<hr>
+<div class="row">
+	<div class="col-12">
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+					<th>Codigo</th>
+					<th>Nombre</th>
+					<th>Telefono</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="alumno in alumnos">
+					<td>{{alumno.codigo}}</td>
+					<td>{{alumno.nombre}}</td>
+					<td>{{alumno.telefono | telefono}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{{alumnos | json}}
