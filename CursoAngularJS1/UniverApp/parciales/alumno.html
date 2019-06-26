@@ -1,16 +1,19 @@
 <h1>Alumno</h1>
 <h4>{{alumno.nombre}}</h4>
 <hr>
+
 <div class="row">
 	<form ng-submit="guardarAlumno()">
-		
-		Codigo:
-		<br>
-		<input type="text" class="form-control" readonly="readonly" ng-model="alumno.codigo">
-		<br>
+		<div ng-hide="creado">
+			Codigo:
+			<br>
+			<input type="text" class="form-control" readonly="readonly" ng-model="alumno.codigo">
+			<br>
+		</div>
+
 		Nombre:
 		<br>
-		<input type="text" class="form-control" ng-model="alumno.nombre" required>
+		<input type="text" class="form-control" ng-model="alumno.nombre" placeholder="Nombre del alumno" required>
 		<br>
 		Telefono:
 		<br>
@@ -18,9 +21,12 @@
 		<br>
 		Direccion:
 		<br>
-		<textarea class="form-control" ng-model="alumno.direccion" required></textarea>
+		<textarea class="form-control" ng-model="alumno.direccion" placeholder="Direccion del alumno" required></textarea>
 		<br>
-		<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+		<button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar Cambios</button>
+		<br>
+		<br>
+		<p class="text-success animated fadeIn fast" ng-show="mensaje">Registro Actualizado</p>
 	</form>
 
 

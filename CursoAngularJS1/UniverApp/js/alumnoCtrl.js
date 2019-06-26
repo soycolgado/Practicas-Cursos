@@ -3,19 +3,51 @@ app.controller('alumnoCtrl',['$scope','$routeParams','$http',function($scope,$ro
 
 	var codigo = $routeParams.codigo;
 	$scope.alumno = {};
-	$http.get('php/servicios/alumnos.getAlumno.php?c='+codigo).success(function(data){
+	$scope.mensaje = false;
 
-		if(data.err !== undefined){
-			window.location = '#/alumnos'
-			return;
-		}
+	$scope.creado = false;
 
-		$scope.alumno = data;
-	});
+	if(codigo == 'nuevo'){
+		$scope.creado = true;
+	}else{
+		$http.get('php/servicios/alumnos.getAlumno.php?c='+codigo).success(function(data){
+
+			if(data.err !== undefined){
+				window.location = '#/alumnos'
+				return;
+			}
+
+			$scope.alumno = data;
+		});
+
+	}
+
 
 	$scope.guardarAlumno = function(){
-		$http.post('php/servicios/alumnos.guardar.php',$scope.alumno).success(function(data){
-			console.log(data);
-		});
+
+		if($scope.creado){
+			$http.post('php/servicios/alumnos.crear.php',$scope.alumno).success(function(data){
+				if(data.err === false){
+					$scope.mensaje = true;
+					setTimeout(function(){
+						$scope.mensaje = false;
+						$scope.$apply();
+					},3500);
+				}
+
+			});
+		}else{
+			$http.post('php/servicios/alumnos.guardar.php',$scope.alumno).success(function(data){
+				if(data.err === false){
+					$scope.mensaje = true;
+					setTimeout(function(){
+						$scope.mensaje = false;
+						$scope.$apply();
+					},3500);
+				}
+
+			});
+		}
+
 	};
 }]);
