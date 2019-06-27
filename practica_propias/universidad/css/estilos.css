@@ -1,3 +1,13 @@
+*{
+	font-family: 'Ubuntu', sans-serif;
+
+}
+
+.contenedorInicio{
+	height: 100%;
+}
+
 footer p{
 	font-weight: bold;
+
 }
