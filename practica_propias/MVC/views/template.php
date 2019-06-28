@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Template</title>
+	<title>Prueba</title>
 	<link rel="stylesheet" href="">
 	<style>
 
@@ -46,15 +46,14 @@
 			position:relative;
 			padding:20px;
 		}
-	
 	</style>
 </head>
 <body>
 	<header>
-		<h1>LOGOTIPO</h1>
+		<h1>BLACKMAMBA</h1>
 	</header>
 	<?php 
-		include "modules/navegacion.php";
+		include "navegacion.php";
 	 ?>
 	<section>
 		<?php 

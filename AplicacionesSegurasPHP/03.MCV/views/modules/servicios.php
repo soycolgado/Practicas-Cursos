@@ -1,1 +1,1 @@
-<h2>Pagina de Servicios</h2>
+<h1>Pagina de serivios</h1>

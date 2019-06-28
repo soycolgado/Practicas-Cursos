@@ -1,17 +1,16 @@
-<?php
-class EnlacesPaginas{
-    
-    
-    public static function enlacesPaginasModel($enlaceModel){
-        if($enlaceModel == 'inicio' || $enlaceModel == 'servicios' || $enlaceModel == 'nosotros' || $enlaceModel == 'contactenos'){
-            $modulo = 'views/modules/'.$enlaceModel.'.php';
-        }else if($enlaceModel == 'index'){
-            $modulo = 'views/modules/inicio.php';
-        }else{
-            $modulo = 'views/modules/inicio.php';
-        }
+<?php 
+	class EnlacesPaginas{
+		static public function enlacesPaginasModel($enlace){
+			if($enlace == "nosotros" || $enlace == "servicios" || $enlace == "contactenos"){
+				$modulo = "views/modules/".$enlace.".php";
+				
+			}elseif ($enlace == "index") {
+				$modulo = "views/modules/inicio.php";
+			}else{
+				$modulo = "views/modules/inicio.php";
+			}
+			return $modulo;
+		}
 
-        return $modulo;
-    }
-}
-?>
+	}
+ ?>
