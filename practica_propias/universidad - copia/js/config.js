@@ -8,5 +8,8 @@ app.config(function($routeProvider){
 	}).when('/profesores', {
 		templateUrl: 'templates/profesores.html',
 		controller: 'profesoresCtrl'
+	}).when('/alumno/:codigo', {
+		templateUrl: 'templates/alumno.html',
+		controller: 'alumnoCtrl'
 	}).otherwise({ redirectTo: '/inicio' });
 });
