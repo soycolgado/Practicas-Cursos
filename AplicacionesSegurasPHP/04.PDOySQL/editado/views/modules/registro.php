@@ -1,6 +1,6 @@
 <h1>REGISTRO DE USUARIO</h1>
 
-<form method="post" action="">
+<form method="post">
 	
 	<input type="text" placeholder="Usuario" name="usuarioRegistro" required>
 
@@ -12,13 +12,14 @@
 
 </form>
 
-<?php
-$registro = new MvcController();
-$registro -> registroUsuarioController();
+<?php 
+	
+	$registro = new MvcController();
+	$registro -> registroUsuarioController();
 
-if(isset($_GET["action"])){
-	if($_GET["action"] == "ok"){
-		echo "Registro exitoso";
+	if(isset($_GET['action'])){
+		if($_GET['action'] == "ok"){
+			echo "Registro Exitoso";
+		}
 	}
-}
-?>
+ ?>

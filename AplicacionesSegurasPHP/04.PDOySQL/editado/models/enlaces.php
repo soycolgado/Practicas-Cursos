@@ -2,7 +2,7 @@
 
 class Paginas{
 	
-	public function enlacesPaginasModel($enlaces){
+	public static function enlacesPaginasModel($enlaces){
 
 
 		if($enlaces == "ingresar" || $enlaces == "usuarios" || $enlaces == "editar" || $enlaces == "salir"){
@@ -15,14 +15,12 @@ class Paginas{
 
 			$module =  "views/modules/registro.php";
 		
-		}
-
-		else if($enlaces == "ok"){
+		}else if($enlaces == "ok"){
 			$module = "views/modules/registro.php";
-		}
-
-		else if($enlaces == "fallo"){
-			$module ="views/modules/ingresar.php";
+		}else if($enlaces == "fallo"){
+			$module = "views/modules/ingresar.php";
+		}else if($enlaces == "cambio"){
+			$module = "views/modules/usuarios.php";
 		}
 
 		else{

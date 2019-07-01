@@ -1,13 +1,19 @@
+<?php 
+	session_start();
+	if(!$_SESSION['validar']){
+		header('location: index.php?action=ingresar');
+	}
+ ?>
+
 <h1>EDITAR USUARIO</h1>
 
-<form method="post" action="">
+<form method="post">
 	
-	<input type="text" placeholder="Usuario" name="usuario" required>
-
-	<input type="password" placeholder="Contraseña" name="password" required>
-
-	<input type="email" placeholder="Email" name="email" required>
-
-	<input type="submit" value="Enviar">
+	<?php 
+		$editar = new MvcController();
+		$editar -> editarUsuarioController();
+		$editar -> actualizarUsuarioController();
+	 ?>
 
 </form>
+

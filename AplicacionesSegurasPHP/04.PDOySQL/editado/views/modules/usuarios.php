@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+	if(!$_SESSION['validar']){
+		header('location: index.php?action=ingresar');
+	}
+ ?>
+
 <h1>USUARIOS</h1>
 
 	<table border="1">
@@ -17,15 +24,24 @@
 
 		<tbody>
 			
-		<?php
-		$vista = new MvcController();
-		$vista -> vistaUsuariosController();
-	?>
+			<?php 
+				$usuarios = new MvcController();
+				$usuarios -> vistaUsuariosController();
+			 ?>
+			
 
 		</tbody>
+		
+			<?php 
+				if(isset($_GET['action'])){
+					if($_GET['action'] == "cambio"){
+						echo "Cambio Exitoso";
+					}
+				}
+
+			 ?>
+		
 
 
 
 	</table>
-
-	
