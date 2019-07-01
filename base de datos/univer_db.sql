@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=armscii8;
 
--- Volcando datos para la tabla univer_db.alumnos: ~12 rows (aproximadamente)
+-- Volcando datos para la tabla univer_db.alumnos: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
 INSERT INTO `alumnos` (`codigo`, `nombre`, `telefono`, `direccion`) VALUES
 	(1, 'FERNANDO HERRERA SORIANO', '99498877', 'Colonia el porvenir, cerca del cerro Juana Mendoza'),

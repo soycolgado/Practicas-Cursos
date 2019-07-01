@@ -27,6 +27,7 @@
 			<?php 
 				$usuarios = new MvcController();
 				$usuarios -> vistaUsuariosController();
+				$usuarios -> borrarUsuarioController();
 			 ?>
 			
 

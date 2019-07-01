@@ -52,6 +52,18 @@
 				return "error";
 			}
 		}
+
+		public static function borrarUsuarioModel($datos,$tabla){
+			$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+			$stmt->bindParam(":id",$datos,PDO::PARAM_INT);
+			if($stmt->execute()){
+				return "success";
+			}else{
+				return "error";
+			}
+
+			$stmt->close();
+		}
 	}
 
 
