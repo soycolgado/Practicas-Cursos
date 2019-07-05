@@ -35,7 +35,7 @@
                 <td><?= $this->Number->format($user->id) ?></td>
                 <td><?= h($user->first_name) ?></td>
                 <td><?= h($user->last_name) ?></td>
-                <td><?= h($user->email) ?></td>
+                <td><?= h($user->email) ?></td> 
                 <td><?= h($user->role) ?></td>
                 <td><?= h($user->active) ?></td>
                 <td><?= h($user->created) ?></td>

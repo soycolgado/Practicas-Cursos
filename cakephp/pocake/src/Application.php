@@ -21,6 +21,7 @@ use Cake\Http\BaseApplication;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 
+
 /**
  * Application setup class.
  *
@@ -34,6 +35,15 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+
+        $this->addPlugin('ContactManager');
+
+        $this->addPlugin('BootstrapUI');
+
+        $this->addPlugin('BootstrapUI');
+
+        $this->addPlugin('BootstrapUI');
+
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 
