@@ -192,6 +192,7 @@ Type::build('datetime')
 Type::build('timestamp')
     ->useImmutable();
 
+
 /*
  * Custom Inflector rules, can be set to correctly pluralize or singularize
  * table, model, controller names or whatever other string is passed to the
@@ -201,17 +202,3 @@ Type::build('timestamp')
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
-use Cake\Http\BaseApplication;
-use ContactManager\Plugin as ContactManagerPlugin;
-
-class Application extends BaseApplication {
-    public function bootstrap()
-    {
-        parent::bootstrap();
-        // Load the contact manager plugin by class name
-        $this->addPlugin(ContactManagerPlugin::class);
-
-        // Load a plugin with a vendor namespace by 'short name'
-        $this->addPlugin('AcmeCorp/ContactManager');
-    }
-}
