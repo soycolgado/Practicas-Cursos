@@ -51,48 +51,33 @@ class UsersTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
+    public function validationDefault(\Cake\Validation\Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmptyString('id', 'create');
+            ->add('id','valid',['rule' => 'numeric'])
+            ->notEmpty('id','create');
 
         $validator
-            ->scalar('first_name')
-            ->maxLength('first_name', 100)
-            ->requirePresence('first_name', 'create')
-            ->notEmptyString('first_name');
+            ->requirePresence('first_name','create')
+            ->notEmpty('first_name','Rellene este campo');
 
         $validator
-            ->scalar('last_name')
-            ->maxLength('last_name', 100)
-            ->requirePresence('last_name', 'create')
-            ->notEmptyString('last_name');
+            ->requirePresence('last_name','create')
+            ->notEmpty('last_name','Rellene este campo');
+        
+        $validator
+            ->add('email','valid',['rule'=>'email', 'message' => 'Ingrese correo electronico valido'])
+            ->requirePresence('first_name','create')
+            ->notEmpty('first_name','Rellene este campo');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmptyString('email');
-
-        $validator
-            ->scalar('password')
-            ->maxLength('password', 255)
-            ->requirePresence('password', 'create')
-            ->notEmptyString('password');
-
-        $validator
-            ->scalar('role')
-            ->requirePresence('role', 'create')
-            ->notEmptyString('role');
-
-        $validator
-            ->boolean('active')
-            ->requirePresence('active', 'create')
-            ->notEmptyString('active');
+            ->requirePresence('password','create')
+            ->notEmpty('password','Rellene este campo','create');
 
         return $validator;
     }
 
+    
     /**
      * Returns a rules checker object that will be used for validating
      * application integrity.
@@ -110,5 +95,18 @@ class UsersTable extends Table
     public function findAuth(Query $query, array $options){
         $query->select(['id','first_name','last_name','email','password','role'])->where(['Users.active'=> 1]);
         return $query;
+    }
+
+    public function recoverPassword($id){
+        $user = $this->get($id);
+        return $user->password;
+    }
+
+    public function beforeDelete($event,$entity,$optios){
+        if($entity->role == 'admin'){
+            return false;
+        }else{
+            return true;
+        }
     }
 }
