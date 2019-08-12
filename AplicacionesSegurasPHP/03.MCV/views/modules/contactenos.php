@@ -1,1 +1,1 @@
-<h1>Pagina de contactenos</h1>
+<h1>PÁGINA DE CONTACTENOS</h1>
