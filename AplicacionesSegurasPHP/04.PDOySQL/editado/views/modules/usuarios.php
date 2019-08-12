@@ -1,9 +1,16 @@
-<?php 
-	session_start();
-	if(!$_SESSION['validar']){
-		header('location: index.php?action=ingresar');
-	}
- ?>
+<?php
+
+session_start();
+
+if(!$_SESSION["validar"]){
+
+	header("location:index.php?action=ingresar");
+
+	exit();
+
+}
+
+?>
 
 <h1>USUARIOS</h1>
 
@@ -24,25 +31,32 @@
 
 		<tbody>
 			
-			<?php 
-				$usuarios = new MvcController();
-				$usuarios -> vistaUsuariosController();
-				$usuarios -> borrarUsuarioController();
-			 ?>
-			
+			<?php
+
+			$vistaUsuario = new MvcController();
+			$vistaUsuario -> vistaUsuariosController();
+			$vistaUsuario -> borrarUsuarioController();
+
+			?>
 
 		</tbody>
-		
-			<?php 
-				if(isset($_GET['action'])){
-					if($_GET['action'] == "cambio"){
-						echo "Cambio Exitoso";
-					}
-				}
-
-			 ?>
-		
-
-
 
 	</table>
+
+<?php
+
+if(isset($_GET["action"])){
+
+	if($_GET["action"] == "cambio"){
+
+		echo "Cambio Exitoso";
+	
+	}
+
+}
+
+?>
+
+
+
+

@@ -5,7 +5,13 @@
 		}
 
 		public function enlacesPaginasController(){
-			$enlaces = $_GET['action'];
+			if(isset($_GET['action'])){
+				$enlaces = $_GET['action'];
+			}else{
+				$enlaces = "index";
+			}
+
+			
 			$respuesta = EnlacesPaginas::enlacesPaginasModel($enlaces);
 			include $respuesta;
 		}
