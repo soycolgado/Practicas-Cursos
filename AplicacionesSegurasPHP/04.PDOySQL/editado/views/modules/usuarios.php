@@ -1,17 +1,3 @@
-<?php
-
-session_start();
-
-if(!$_SESSION["validar"]){
-
-	header("location:index.php?action=ingresar");
-
-	exit();
-
-}
-
-?>
-
 <h1>USUARIOS</h1>
 
 	<table border="1">
@@ -31,32 +17,16 @@ if(!$_SESSION["validar"]){
 
 		<tbody>
 			
-			<?php
-
-			$vistaUsuario = new MvcController();
-			$vistaUsuario -> vistaUsuariosController();
-			$vistaUsuario -> borrarUsuarioController();
-
-			?>
+			<tr>
+				<td>juan</td>
+				<td>1234</td>
+				<td>juan@hotmail.com</td>
+				<td><button>Editar</button></td>
+				<td><button>Borrar</button></td>
+			</tr>
 
 		</tbody>
 
+
+
 	</table>
-
-<?php
-
-if(isset($_GET["action"])){
-
-	if($_GET["action"] == "cambio"){
-
-		echo "Cambio Exitoso";
-	
-	}
-
-}
-
-?>
-
-
-
-

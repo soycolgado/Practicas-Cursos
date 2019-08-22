@@ -16,23 +16,8 @@ class Paginas{
 			$module =  "views/modules/registro.php";
 		
 		}
-
 		else if($enlaces == "ok"){
-
-			$module =  "views/modules/registro.php";
-		
-		}
-
-		else if($enlaces == "fallo"){
-
-			$module =  "views/modules/ingresar.php";
-		
-		}
-
-		else if($enlaces == "cambio"){
-
-			$module =  "views/modules/usuarios.php";
-		
+			$module = "views/modules/registro.php";
 		}
 
 		else{
