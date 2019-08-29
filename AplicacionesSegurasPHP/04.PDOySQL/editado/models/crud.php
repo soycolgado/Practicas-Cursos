@@ -48,7 +48,33 @@
 		}
 
 		public static function actualizarUsuarioModel($datos,$tabla){
-			
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET 
+													usuario = :usuario, 
+													password = :password, 
+													email = :email 
+													WHERE id = :id");
+			$stmt->bindParam(":id",$datos['id'],PDO::PARAM_INT);
+			$stmt->bindParam(":usuario",$datos['usuario'],PDO::PARAM_STR);
+			$stmt->bindParam(":password",$datos['password'],PDO::PARAM_STR);
+			$stmt->bindParam(":email", $datos['email'],PDO::PARAM_STR);
+
+			if($stmt->execute()){
+				return "success";
+			}else{
+				return "error";
+			}
+			$stmt->close();
+		}
+
+
+		public static function borrarUsuarioModel($datos,$tabla){
+			$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+			$stmt->bindParam(":id", $datos,PDO::PARAM_INT);
+			if($stmt->execute()){
+				return "success";
+			}else{
+				return "error";
+			}
 		}
 
 	}

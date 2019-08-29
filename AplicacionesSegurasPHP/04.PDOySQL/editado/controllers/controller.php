@@ -91,7 +91,7 @@ class MvcController{
 				<td>'.$item['password'].'</td>
 				<td>'.$item['email'].'</td>
 				<td><a href="index.php?action=editar&id='.$item['id'].'"><button>Editar</button></a></td>
-				<td><button>Borrar</button></td>
+				<td><a href=index.php?action=usuarios&idBorrar='.$item['id'].'><button>Borrar</button></a></td>
 			</tr>';
 		}
 	}
@@ -123,7 +123,28 @@ class MvcController{
 						  );
 
 			$respuesta = Datos::actualizarUsuarioModel($datos, 'usuarios');
+			if($respuesta == "success"){
+				header("location:index.php?action=cambio");
+			}else{
+				echo "Error al actualizar";
+			}
+
+			
 		}
+	}
+
+	public function borrarUsuarioController(){
+		if(isset($_GET['idBorrar'])){
+			$datos = $_GET['idBorrar'];
+			$respuesta = Datos::borrarUsuarioModel($datos,"usuarios");
+			if($respuesta == "success"){
+				header("location:index.php?action=usuarios");
+			}else{
+				echo "Error al realizar el borrado";
+			}
+			exit();
+		}
+		
 	}
 
 }

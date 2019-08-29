@@ -28,6 +28,7 @@
 			<?php
 				$vista = new MvcController();
 				$vista->vistaUsuariosController();
+				$vista->borrarUsuarioController();
 			?>
 			
 
@@ -36,3 +37,15 @@
 
 
 	</table>
+
+	<?php
+		if(isset($_GET['action'])){
+			if($_GET['action'] == "cambio"){
+				echo "Actualizacion exitosa";
+			}else if($_GET['action'] == "borrar"){
+				echo "Borrado exitoso";
+			}
+		}
+		
+	
+	?>
