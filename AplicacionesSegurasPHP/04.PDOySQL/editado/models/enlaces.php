@@ -18,6 +18,8 @@ class Paginas{
 		}
 		else if($enlaces == "ok"){
 			$module = "views/modules/registro.php";
+		}else if($enlaces == "fallo"){
+			$module = "views/modules/ingresar.php";
 		}
 
 		else{
