@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="expresionesApp">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Expresiones</title>
+</head>
+<body>
+	<div ng-controller="miControlador">
+		{{mensaje}} {{mensaje2}}
+
+		<p>Este libro fue escrito por {{libro.autor}}, se llama "{{libro.titulo}} y habla sobre {{libro.tema}}"</p>
+
+		<p>Numero Aleatorio: {{numeroAleatorio()}}</p>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<script>
+		var aplicacionDeExpresiones = angular.module('expresionesApp',[]);
+		aplicacionDeExpresiones.controller('miControlador', ['$scope', function($scope){
+			$scope.mensaje = "Expresiones AngularJS";
+			$scope.mensaje2 = ".... !Te dejan agregar muchos valores!";
+
+			$scope.libro = {};
+			$scope.libro.autor = "Carlos Solis";
+			$scope.libro.titulo = "Manual Del Guerrero";
+			$scope.libro.tema = "AngularJS";
+
+			$scope.numeroAleatorio = function(){
+				return Math.floor(Math.random() * 100);
+			}
+		}])
+
+	</script>
+</body>
+</html>
