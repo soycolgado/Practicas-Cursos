@@ -1,0 +1,27 @@
+/* SELECTOR UNIVERSAL */
+/* *{
+    color:red;
+} */
+
+h1,h2,h3{
+    color: blue;
+}
+
+div article p{
+    font-size: 28px;
+    color:black;
+}
+
+div p a{
+    font-size: 28px;
+    color:red;
+}
+
+.grande{
+    font-size: 28px;
+}
+
+#rojo{
+    color:red;
+}
+
