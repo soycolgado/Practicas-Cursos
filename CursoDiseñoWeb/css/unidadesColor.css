@@ -1,0 +1,7 @@
+.caja{
+    width: 200px;
+    height: 200px;
+    /* background:#328bf0; */
+    /* background: rgb(84%,15%,24%); */
+    background: rgba(215,38,61,.5);
+}
