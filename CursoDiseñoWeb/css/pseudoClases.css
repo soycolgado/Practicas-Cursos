@@ -1,0 +1,16 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    background: #4357ad;
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+a:hover{
+    background: #009ddc;
+}

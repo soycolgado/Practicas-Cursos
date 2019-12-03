@@ -1,0 +1,24 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body{
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto{
+    text-shadow: 2px 3px 10px #000;
+}
+/* Primer valor: posicion horizontal de la sombra
+Segundo Valor: Posicion Vertical de la sombra
+Tercer Valor: La solides de la sombra
+Cuarto Valor: El color */
+.caja{
+    width: 200px;
+    height: 200px;
+    background:#f79256;
+    margin-top:40px;
+    box-shadow:0 5px 3px rgba(0,0,0,.5);
+}
