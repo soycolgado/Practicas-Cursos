@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background: #f2f2f2;
 }
 
@@ -22,6 +22,7 @@ header{
     justify-content: space-between;
     align-items: center;
     margin:0 auto;
+    margin-bottom: 20px;
 }
 
 header .logo{
@@ -43,4 +44,80 @@ header nav a:hover{
     color:#22a2c9;
     
 }
+
+.container-main{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    width: 35%;
+}
+
+aside article .titulo{
+    background: #006fba;
+    color: #fff;
+    font-size: 10px;
+    padding: 15px;
+}
+
+aside article .body-article{
+    background :#ddd;
+    padding: 20px;
+    border: 1px solid #ccc;
+    
+}
+
+aside article .body-article ul li{
+    font-size: 13px;
+    line-height: 25px;
+}
+
+section.main{
+    width: 65%;
+    padding: 0 20px;
+}
+
+section.main article{
+    display: flex;
+    flex-direction: row;
+}
+
+section.main article .info-article{
+    width: 85%;
+    border:1px solid #ccc;
+    padding: 20px;
+}
+
+section.main article .thumb-article img{
+    vertical-align: top;
+    width: 100%;
+}
+
+section.main article .body-article p{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+section.main article .titulo{
+    border-bottom:1px solid #ccc;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    
+}
+
+section.main article .fecha-article{
+    width: 15%;
+    padding: 20px;
+}
+
+
+
+
+
+
 
