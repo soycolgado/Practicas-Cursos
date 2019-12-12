@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Times New Roman', Times, serif;
-    background: #f2f2f2;
+    background: #fff;
 }
 
 .container-menu{
@@ -55,7 +55,7 @@ header nav a:hover{
 }
 
 aside{
-    width: 35%;
+    width: 30%;
 }
 
 aside article .titulo{
@@ -66,7 +66,7 @@ aside article .titulo{
 }
 
 aside article .body-article{
-    background :#ddd;
+    background :#f0f0f0;
     padding: 20px;
     border: 1px solid #ccc;
     
@@ -78,17 +78,18 @@ aside article .body-article ul li{
 }
 
 section.main{
-    width: 65%;
+    width: 70%;
     padding: 0 20px;
 }
 
 section.main article{
     display: flex;
     flex-direction: row;
+    
 }
 
 section.main article .info-article{
-    width: 85%;
+    width: 80%;
     border:1px solid #ccc;
     padding: 20px;
 }
@@ -111,8 +112,23 @@ section.main article .titulo{
 }
 
 section.main article .fecha-article{
-    width: 15%;
+    width: 16%;
     padding: 20px;
+}
+
+.fecha-article{
+    background: #f0f0f0;
+    align-self: flex-start ;
+    font-size: 13px;
+    text-align: right;
+    
+}
+
+.fecha-article .header-fecha h6{
+    font-size: 17px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 
