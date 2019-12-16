@@ -3,9 +3,9 @@
 }
 
 body{
-    background: #fff;
     font-family: "Open Sans",sans-serif;
     font-size: 16px;
+    background: #fff;
 }
 
 .contenedor{
@@ -17,7 +17,7 @@ body{
 }
 
 header{
-    background: url(../img/bg.jpg) #49a3d6;
+    background: url(/img/bg.jpg) #ccc;
     background-repeat: no-repeat;
     background-position: center;
     max-height: 600px;
@@ -29,12 +29,12 @@ header .menu{
 }
 
 header .menu a{
-    margin: 0 20px;
     color: #fff;
-    padding-bottom: 9px ;
-    font-size: 1em;
-    text-decoration: none;
     display: inline-block;
+    margin: 0 20px;
+    font-size: 1em;
+    padding-bottom: 9px;
+    text-decoration: none;
     border-bottom: 2px solid transparent;
 
 }
@@ -44,7 +44,7 @@ header .menu a:hover{
 }
 
 header .contenedor-texto{
-    margin: 190px 0;
+    margin: 192px 0;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -57,22 +57,3 @@ header .contenedor-texto .texto{
     text-align: center;
     padding: 20px 60px;
 }
-
-header .contenedor-texto h1,
-header .contenedor-texto h2{
-    color: #fff;
-    font-weight: 300;
-    margin: 0;
-}
-
-header .contenedor-texto .texto .nombre{
-    margin-bottom: 10px;
-    font-size: 50px;
-    line-height: 50px;
-}
-
-header .contenedor-texto .texto .profesion{
-    font-size: 25px;
-    line-height: 25px;
-}
-
