@@ -8,28 +8,35 @@
 </head>
 <body>
     <script>
-        var valor;
-        valor = prompt("Ingrese un valor entre 1 y 5");
-        valor = parseInt(valor);
-        switch(valor){
-            case 1:
-                document.write("uno");
+        function convertirCastellano(x){
+            switch(x){
+                case 1:
+                    return 'uno';
                 break;
-            case 2:
-                document.write("dos");
-                break;
-            case 3:
-                document.write('tres');
-                break;
-            case 4:
-                document.write('cuatros');
-                break;
-            case 5:
-                document.write('cinco');
-                break;
-            default:
-                document.write('Debe ingresar un numero entre 1 y 5');
+                case 2:
+                    return 'dos';
+                    break;
+                case 3: 
+                    return 'tres';
+                    break;
+                case 4:
+                    return 'cuatro';
+                    break;
+                case 5:
+                    return 'cinco';
+                    break;
+                default: 
+                    return 'Ingrese un numero del 1 al 5';
+            }
         }
+
+
+        var valor;
+        valor = prompt('Ingrese un numero del 1 al 5');
+        valor = parseInt(valor);
+        var respuesta = convertirCastellano(valor);
+        document.write(respuesta)
+        
     </script>
 </body>
 </html>
