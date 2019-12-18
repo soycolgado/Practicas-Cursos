@@ -145,7 +145,7 @@ header .contenedor-texto .texto h2{
     width: 100%;
     vertical-align: top;
     border-radius: 5px;
-    opacity: .8;
+    opacity: .6;
     cursor: pointer;
 }
 
@@ -238,7 +238,7 @@ footer .contacto .formulario input[type="submit"]:hover{
 }
 
 footer .redes-sociales{
-    margin-top: 20px;
+    margin-top: 40px;
     background: rgb(11, 44, 71);
     
 }
@@ -277,6 +277,42 @@ footer .redes-sociales .instagram{
     color: #3f729b;
 }
 
+@media screen and (max-width:1000px){
+    header nav.menu{
+        text-align: center;
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width:650px){
+    footer .contacto .formulario textarea{
+        margin-top: 0px;
+    }
+    footer .contacto .formulario input[type="text"],
+    footer .contacto .formulario input[type="email"],
+    footer .contacto .formulario textarea{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer .redes-sociales a{
+        font-size: 30px;
+    }
+
+
+}
+
+@media screen and (max-width:550px){
+    .main .trabajos .contenedor-trabajos .trabajo{
+        width: 43%;
+    }
+
+
+}
 
 
 
