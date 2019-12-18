@@ -92,19 +92,21 @@ header .contenedor-texto .texto h2{
 }
 
 .main .acerca-de .foto img{
-    border-radius: 100%;
+    vertical-align: top;
+    border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, .5);
 }
 
 .main .acerca-de .texto{
     margin-top: 20px;
     padding: 0 40px;
+    line-height: 30px;
 }
 
 .main .acerca-de .texto .titulo{
     color: rgb(65, 60, 71);
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 34px;
 }
 
 .main .trabajos{
@@ -118,8 +120,8 @@ header .contenedor-texto .texto h2{
 
 .main .trabajos .titulo{
     text-align: center;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 34px;
+    font-weight: 300;
     margin-bottom: 40px;
 }
 
@@ -172,7 +174,112 @@ footer{
 
 footer .contacto .titulo{
     text-align: center;
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 40px;
+
 }
+
+footer .contacto .formulario{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"]{
+    width: 45%;
+}
+
+
+
+
+
+footer .contacto .formulario textarea{
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+    
+}
+
+footer .contacto .formulario input[type="submit"]{
+    display: block;
+    margin: 20px auto 0px auto;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid rgb(23, 122, 202);
+    font-size: 18px;
+    color: rgb(23, 122, 202);
+    border-radius: 5px;
+
+}
+
+footer .contacto .formulario input[type="submit"]:hover{
+    color: #fff;
+    background: rgb(23, 122, 202);
+}
+
+footer .redes-sociales{
+    margin-top: 20px;
+    background: rgb(11, 44, 71);
+    
+}
+
+footer .redes-sociales .contenedor{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+footer .redes-sociales a{
+    display: block;
+    font-size: 50px;
+}
+
+footer .redes-sociales .youtube{
+    color: #c4302b;
+}
+
+footer .redes-sociales .facebook{
+    color: #3b5998;
+}
+
+footer .redes-sociales .twitter{
+    color:#00acee ;
+}
+
+footer .redes-sociales .github{
+    color: #fff;
+
+}
+
+footer .redes-sociales .instagram{
+    color: #3f729b;
+}
+
+
+
+
 
 
 
