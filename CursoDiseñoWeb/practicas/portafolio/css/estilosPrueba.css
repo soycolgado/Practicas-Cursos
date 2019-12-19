@@ -202,7 +202,7 @@ footer .contacto .formulario textarea{
 
 footer .contacto .formulario input[type="text"],
 footer .contacto .formulario input[type="email"]{
-    width: 45%;
+    width: 49%;
 }
 
 
@@ -290,6 +290,10 @@ footer .redes-sociales .instagram:hover{
 
     .main .trabajos .contenedor-trabajos .trabajo{
         width: 30%;
+    }
+
+    footer .redes-sociales .contenedor{
+        flex-wrap: wrap;
     }
 
 }
