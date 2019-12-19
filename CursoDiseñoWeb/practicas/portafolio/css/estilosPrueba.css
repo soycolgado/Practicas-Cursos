@@ -197,7 +197,7 @@ footer .contacto .formulario textarea{
     padding: 10px;
     display: inline-block;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
 }
 
 footer .contacto .formulario input[type="text"],
@@ -247,34 +247,40 @@ footer .redes-sociales .contenedor{
     width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px 0;
 }
 
 footer .redes-sociales a{
     display: block;
-    font-size: 50px;
-}
-
-footer .redes-sociales .youtube{
-    color: #c4302b;
-}
-
-footer .redes-sociales .facebook{
-    color: #3b5998;
-}
-
-footer .redes-sociales .twitter{
-    color:#00acee ;
-}
-
-footer .redes-sociales .github{
+    width:100px;
+    padding: 20px;
+    font-size: 35px;
     color: #fff;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+footer .redes-sociales .youtube:hover{
+    background: #c4302b;
+}
+
+footer .redes-sociales .facebook:hover{
+    background: #3b5998;
+}
+
+footer .redes-sociales .twitter:hover{
+    background:#00acee ;
+}
+
+footer .redes-sociales .github:hover{
+    background: #6e5494;
 
 }
 
-footer .redes-sociales .instagram{
-    color: #3f729b;
+footer .redes-sociales .instagram:hover{
+    background: #c13584;
 }
 
 @media screen and (max-width:1000px){
