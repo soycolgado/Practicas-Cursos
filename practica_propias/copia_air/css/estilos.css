@@ -9,13 +9,13 @@ body{
 }
 
 .contenedor{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     overflow: hidden;
 }
 
 header{
-    background: #f2f2f2;
+    background: #fafafa;
     height: 54px;
 }
 
@@ -23,7 +23,7 @@ header .contenedor{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: #f2f2f2;
+    background: #fafafa;
     flex-wrap: no-wrap;
     height: 100%;
 }
@@ -51,8 +51,19 @@ header .contenedor .contenedor-ingreso{
 
 header .contenedor .contenedor-ingreso p{
     color: #3e8fe0;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
+    margin-bottom: 0;
+    
+}
+
+header .contenedor .contenedor-ingreso p span.acceso{
+    position: relative;
+    bottom: 3px;
+}
+
+header .contenedor .contenedor-ingreso p i{
+    font-size: 25px;
 }
 
 header .contenedor .contenedor-ingreso a{
@@ -64,10 +75,16 @@ header .contenedor .contenedor-ingreso a{
     text-decoration: none;
     font-size: 12px;
     font-weight: 700;
+    margin-left: 20px;
 }
 
 .contenedor .logo img{
     width: 100%;
     vertical-align: bottom;
 
+}
+
+.slider img{
+    width: 100%;
+    
 }
