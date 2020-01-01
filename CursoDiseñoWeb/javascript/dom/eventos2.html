@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+    <style>
+        .caja{
+            width: 150px;
+            height: 150px;
+            background: #000;
+            margin: 20px;
+            color: aliceblue;
+            text-align: center;
+            font-weight: bold;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="saludo()">Saludo</button> -->
+    <button id="btn-caja">Crear Caja</button>
+    <section id="contenedor">
+        
+    </section>
+    <!-- <button id="btn-saludar">Saludo</button> -->
+
+    <script>
+        // function saludo(){
+        //     alert("hola");
+        // }    
+        // var btnSaludar = document.getElementById('btn-saludar');
+        // btnSaludar.addEventListener('click',saludo);
+        // btnSaludar.addEventListener('click',saludo2);
+        // btnSaludar.removeEventListener('click',saludo);
+
+        // function saludo(){
+        //     alert('Event Listener');
+        // }
+
+        // function saludo2(){
+        //     alert('Soy un segundo saludo');
+        // }
+
+    var btnCrear = document.getElementById('btn-caja');
+    btnCrear.addEventListener('click',crearCaja);
+    var contenedor = document.getElementById('contenedor');
+    function crearCaja(){
+        var caja = document.createElement('div');
+        var contenido = document.createTextNode('soy una caja');
+        caja.appendChild(contenido);
+        caja.className = "caja";
+        contenedor.appendChild(caja);
+    }
+    </script>
+</body>
+</html>
