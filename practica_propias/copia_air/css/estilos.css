@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans";
+    background: #fff;
+    font-size: 14px;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header{
+    background: #fafafa;
+    height: 54px;
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fafafa;
+    flex-wrap: no-wrap;
+    height: 100%;
+}
+
+header .contenedor .logo{
+    width: 225px;
+}
+
+header .contenedor .menu a{
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    line-height: 28px;
+    margin-left: 20px;
+}
+
+
+header .contenedor .contenedor-ingreso{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    padding: 10px;
+}
+
+header .contenedor .contenedor-ingreso p{
+    color: #3e8fe0;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+
+header .contenedor .contenedor-ingreso p span.acceso{
+    position: relative;
+    bottom: 3px;
+}
+
+header .contenedor .contenedor-ingreso p i{
+    font-size: 25px;
+}
+
+header .contenedor .contenedor-ingreso a{
+    display: block;
+    color: #fff;
+    background: #3e8fe0;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.contenedor .logo img{
+    width: 100%;
+    vertical-align: bottom;
+
+}
+
+.slider img{
+    width: 100%;
+    
+}
