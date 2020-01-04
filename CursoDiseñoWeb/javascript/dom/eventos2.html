@@ -6,26 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eventos</title>
     <style>
+        button{
+            background: none;
+            border: 1px solid rgb(35, 101, 155);
+            border-radius: 5px;
+            font-size: 15px;
+            display: block;
+            padding: 10px 15px;
+            color:rgb(35, 101, 155) ;
+        }
+        button:hover{
+            background: rgb(35, 101, 155);
+            color: #fff;
+        }
+        section.contenedor{
+            margin-top: 20px;
+        }
+
         .caja{
-            width: 150px;
-            height: 150px;
-            background: #000;
-            margin: 20px;
-            color: aliceblue;
-            text-align: center;
-            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            color: rgb(35, 101, 155);
             display: inline-block;
+            margin: 10px;
+            border: 1px solid rgb(35, 101, 155);
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <!-- <button onclick="saludo()">Saludo</button> -->
-    <button id="btn-caja">Crear Caja</button>
-    <section id="contenedor">
-        
-    </section>
+    <button id="btn-crear">Crear Caja</button>
     <!-- <button id="btn-saludar">Saludo</button> -->
+    <section id="contenedor">
 
+
+    </section>
     <script>
         // function saludo(){
         //     alert("hola");
@@ -43,16 +61,16 @@
         //     alert('Soy un segundo saludo');
         // }
 
-    var btnCrear = document.getElementById('btn-caja');
-    btnCrear.addEventListener('click',crearCaja);
-    var contenedor = document.getElementById('contenedor');
-    function crearCaja(){
-        var caja = document.createElement('div');
-        var contenido = document.createTextNode('soy una caja');
-        caja.appendChild(contenido);
-        caja.className = "caja";
-        contenedor.appendChild(caja);
-    }
+        var btnCrear = document.getElementById('btn-crear');
+        btnCrear.addEventListener('click',crearCaja);
+        var contenedor = document.getElementById('contenedor');
+        function crearCaja(){
+            var caja = document.createElement('div');
+            caja.className = "caja";
+            var contenido = document.createTextNode('Caja Creada');
+            caja.appendChild(contenido);
+            contenedor.appendChild(caja);
+        }
     </script>
 </body>
 </html>
