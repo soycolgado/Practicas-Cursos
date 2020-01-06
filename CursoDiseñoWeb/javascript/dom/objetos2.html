@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Obejetos en Javascript</title>
+</head>
+<body>
+    <script>
+        var persona = {
+            nombre: 'Nestor',
+            edad: 33,
+            profesion: 'Desarrollador Web',
+            caminar: function(){
+                console.log('Estoy caminando');
+            },
+            detalles: function(){
+                return this.nombre + ' tiene ' + this.edad + ' años';
+            } 
+        };
+
+        console.log(persona.nombre);
+        persona.caminar();
+        document.write(persona.detalles());
+    </script>
+</body>
+</html>

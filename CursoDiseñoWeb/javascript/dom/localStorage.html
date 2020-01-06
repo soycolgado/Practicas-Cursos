@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <script>
+        if(typeof(Storage)!== "undefined"){
+            localStorage.setItem('nombre','Nestor Bardel');
+            document.write('Su navegador soporta localStorage');
+        }else{
+            document.write('Su navegador no soporta LocalStorage');
+        }
+
+        console.log(localStorage);
+        document.write(localStorage.nombre);
+        localStorage.removeItem('nombre');
+        
+    </script>
+</body>
+</html>

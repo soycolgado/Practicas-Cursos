@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de tiempo</title>
+</head>
+<body>
+    <button id="btn-iniciar">Iniciar</button>
+    <script>
+        function saludar(e){
+            alert('Hola con retraso');
+        }
+
+        
+
+        var iniciar = document.getElementById('btn-iniciar');
+        iniciar.addEventListener('click',function(){
+            setTimeout(saludar,1000);
+        });
+        // setTimeout(saludar,3000);
+        
+    </script>
+</body>
+</html>
