@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pruebas</title>
 </head>
 <body>
     <script>
-        function convertirCastellano(x){
-            switch(x){
-                case 1:
-                    return 'uno';
-                break;
-                case 2:
-                    return 'dos';
-                    break;
-                case 3: 
-                    return 'tres';
-                    break;
-                case 4:
-                    return 'cuatro';
-                    break;
-                case 5:
-                    return 'cinco';
-                    break;
-                default: 
-                    return 'Ingrese un numero del 1 al 5';
+        //----------------- Objetos Literales
+        var cliente1 = {
+            nombre: 'Nestor',
+            deposito: 0,
+            imprimir: function(){
+                document.write('Nombre: ' + this.nombre + '<br>');
+                document.write('Deposito: ' + this.deposito + '<br>');
+            },
+            depositar: function(monto){
+                this.deposito = this.deposito + monto;
+            },
+            extraer: function(monto){
+                this.deposito = this.deposito - monto;
             }
         }
 
+        cliente1.imprimir();
+        cliente1.depositar(1000);
+        document.write('Dinero despues de depositar $1000: <br>');
+        cliente1.imprimir();
+        cliente1.extraer(200);
+        document.write('Dinero despues de extraer $200: <br>' );
+        cliente1.imprimir();
 
-        var valor;
-        valor = prompt('Ingrese un numero del 1 al 5');
-        valor = parseInt(valor);
-        var respuesta = convertirCastellano(valor);
-        document.write(respuesta)
         
     </script>
 </body>
