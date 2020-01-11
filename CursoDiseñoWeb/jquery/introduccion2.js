@@ -1,10 +1,11 @@
 $(document).ready(function(){
-    let boton = document.getElementById('boton');
-    boton.addEventListener('click',efecto);
+    // $('.caja').first().css({
+    //     background:'#000'
+    // });
+    // $('.caja').last().css({
+    //     background:'#000'
+    // });
+    // $('.caja').eq(2).css({background: '#000'});
+    // $('.caja').filter('#segunda').css({background: '#000'});
+    $('.caja').not('#segunda').css({background:'#000'});
 });
-
-function efecto(){
-    $('.caja').slideToggle(1000,()=>{
-        alert('se termino la animacion');
-    });
-}
