@@ -10,22 +10,42 @@
     <style>
         .row{
             background:#e8e8e8;
-            margin: 40px 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .columna{
+            background: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #4d5061;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <div class="row">
-            <div class="col-4">
-                Columna 1
-            </div>
-            <div class="col-4">
-                Columna 1
-            </div>
+        <div class="row justify-content-start">
+            <div class="columna col-4">Columna 1</div>
+            <div class="col-4 columna">Columna 2</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="columna col-4">Columna 1</div>
+            <div class="col-4 columna">Columna 2</div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="columna col-4">Columna 1</div>
+            <div class="col-4 columna">Columna 2</div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="columna col-4">Columna 1</div>
+            <div class="col-4 columna">Columna 2</div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="columna col-4">Columna 1</div>
+            <div class="col-4 columna">Columna 2</div>
         </div>
     </div>
+    
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
