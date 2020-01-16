@@ -1,0 +1,19 @@
+body{
+    background: #f2f2f2;
+}
+
+header{
+    background: #fff;
+    /* max-height: 100px; */
+    /* height: 100px; */
+    /* min-height: 100px; */
+}
+
+
+header .logo img{
+    width:100%;
+    height: auto;
+    vertical-align: top;
+    /* margin-top:-25px ; */
+    line-height: 100px;
+}
