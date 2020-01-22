@@ -55,7 +55,7 @@ export class AppComponent {
 
   agregar(){
     for(let f = 0; f < this.articulos.length; f++){
-      if(this.art.codigo == this.articulos[f].codigo){
+      if(this.articulos[f].codigo == this.art.codigo){
         alert('El codigo que ingreso ya existe');
         return;
       }
@@ -81,12 +81,12 @@ export class AppComponent {
     for(let f = 0; f < this.articulos.length; f++){
       if(this.art.codigo == this.articulos[f].codigo){
         this.articulos[f].descripcion = this.art.descripcion;
-        this.articulos[f] = this.art.precio;
+        this.articulos[f].precio = this.art.precio;
         return;
-      }else{
-        alert('No existe ningun articulo con ese codigo');
       }
+      }
+      alert('No existe ningun articulo con ese codigo');
     }
-  }
+  
 
 }
