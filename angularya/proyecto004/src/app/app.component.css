@@ -2,16 +2,17 @@
     text-align: center;
 }
 
-button{
-    padding: 10px 20px;
-    border: 1px solid rgb(39, 84, 143);
+.btn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 15px 25px;
     background: none;
-    color:  rgb(39, 84, 143);
-    font-size: 25px;
+    border: 1px solid rgb(36, 102, 189);
+    color: rgb(36, 102, 189);
     border-radius: 10px;
 }
 
-button:hover{
-    background:  rgb(39, 84, 143);
+.btn:hover{
+    background: rgb(36, 102, 189);
     color: #fff;
 }
