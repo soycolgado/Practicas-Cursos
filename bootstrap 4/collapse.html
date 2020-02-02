@@ -11,16 +11,65 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-6">
+               <p>
+                   <a class="btn btn-primary" data-toggle="collapse" href="#bloque1" aria-expanded="false" aria-controls="bloque1">
+                       Bloque 1
+                   </a>
+               </p>
+               <div class="collapse" id="bloque1">
+                   <div class="card">
+                       <div class="card-body">
+                           <h4 class="card-title">Titulo</h4>
+                           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus, consequuntur doloribus et esse autem molestias modi voluptatum atque quidem maxime dolorum vel amet odio harum, hic corporis perferendis ea.</p>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="col-6">
                 <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#contentId" aria-expanded="false" aria-controls="contentId">
-                        Show
+                    <a class="btn btn-primary" data-toggle="collapse" href="#bloque2" aria-expanded="false" aria-controls="bloque2">
+                        Bloque 2
                     </a>
                 </p>
-                <div class="collapse" id="contentId">
+                <div class="collapse" id="bloque2">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Titulo</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita ipsum porro, odio cum veniam eius nisi neque numquam asperiores excepturi magni doloremque molestiae officia nostrum rerum tenetur accusantium eum?</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus, consequuntur doloribus et esse autem molestias modi voluptatum atque quidem maxime dolorum vel amet odio harum, hic corporis perferendis ea.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div id="acordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="heading1">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#acordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                          Contenido 1
+                        </a>
+                            </h5>
+                        </div>
+                        <div id="collapse1" class="collapse in" role="tabpanel" aria-labelledby="heading1">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid omnis aliquam eos deleniti dolor, a, nemo dolorem dolores eius debitis quod quo consectetur, expedita ipsum eligendi? Debitis, earum. Ad, molestiae?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="heading2">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#acordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                          Contenido 2
+                        </a>
+                            </h5>
+                        </div>
+                        <div id="collapse2" class="collapse in" role="tabpanel" aria-labelledby="heading2">
+                            <div class="card-body">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi rerum eligendi temporibus exercitationem? Odit voluptate eos, corrupti explicabo, pariatur velit laborum repellendus eius, praesentium voluptatum quaerat magni repellat. Consectetur, sint?
+                            </div>
                         </div>
                     </div>
                 </div>
