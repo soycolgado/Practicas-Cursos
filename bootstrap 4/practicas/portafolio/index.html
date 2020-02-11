@@ -90,7 +90,7 @@
                                 <img src="img/img-1.jpg" class="img-fluid imagen"  alt="">
                             </a>
                         </div>
-                        <div class="contenedor-imagen col-6 col-lg-8">
+                        <div class="contenedor-imagen col-12 col-lg-8">
                             <a href="#" data-toggle="modal" data-target="#modal">
                                 <img src="img/img-2.jpg" class="img-fluid" alt="">
                             </a>
@@ -120,11 +120,47 @@
                                 <img src="img/img-7.jpg" class="img-fluid" alt="">
                             </a>
                         </div>
+                        <!-- VENTANA MODAL -->
+                        <div class="modal fade" id="modal">
+                            <div class="modal-dialog d-flex justify-content-center align-items-center">
+                                <div class="modal-content">
+                                    <img src="" alt="" id="imagen-modal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCION ACERCA DE -->
+            <div class="row acerca-de align-items-center">
+                <div class="col-12 col-lg-4 foto">
+                    <img src="img/foto.jpg" class="rounded-circle img-fluid" alt="">
+                    <p class="nombre">Néstor Bardel</p>
+                </div>
+                <div class="col-12 col-lg-8 info">
+                    <h2 class="titulo">Acerca de</h2>
+                    <p class="resumen">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum optio commodi exercitationem distinctio facere. Quidem assumenda voluptates, accusamus consectetur maxime omnis labore repudiandae asperiores maiores aliquid dolorum. Itaque, maiores ut.Exercitationem impedit nemo in vero ipsum, repellat magnam dicta molestiae expedita ex fuga cupiditate maxime perspiciatis deleniti magni officiis accusamus non eius nisi consequuntur totam? Quidem culpa cupiditate repellat porro.
+                    </p>
+                    <p class="resumen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi error, accusamus eius ab, omnis quo consectetur, adipisci corrupti earum expedita? Quibusdam ab laboriosam similique, ut veritatis aliquid esse consequuntur?</p>
+                    <p class="label">HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+                    </div>
+                    <p class="label">CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+                    </div>
+                    <p class="label">JAVASCRIPT</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -133,10 +169,6 @@
 </body>
 </html>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-  Launch
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
