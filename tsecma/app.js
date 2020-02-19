@@ -1,25 +1,30 @@
 "use strict";
-(function() {
-    const miFuncion = function(a) {
-        return a;
-    };
-    const miFuncionF = (a) => a.toUpperCase();
-    console.log(miFuncionF('Flecha'));
-    const sumarN = function(a, b) {
-        return a + b;
-    };
-    const sumarF = (a, b) => a + b;
-
-    const hulk = {
-        nombre: 'Hulk',
-        smash() {
-            setTimeout(() => {
-                console.log(`${ this.nombre } smash!!!`);
-
-            }, 1000);
+(() => {
+    // class Avenger{
+    //     nombre:string;
+    //     equipo:string;
+    //     nombreReal:string;
+    //     puedePelear:boolean;
+    //     peleasGanadas:number;
+    //     constructor(nombre:string,equipo:string){
+    //         this.nombre = nombre;
+    //         this.equipo = equipo;
+    //     }
+    // }
+    class Avenger {
+        // nombre:string;
+        // equipo:string;
+        // nombreReal:string;
+        // puedePelear:boolean;
+        // peleasGanadas:number;
+        constructor(nombre, equipo, nombreReal, puedePelear = true, peleasGanadas = 0) {
+            this.nombre = nombre;
+            this.equipo = equipo;
+            this.nombreReal = nombreReal;
+            this.puedePelear = puedePelear;
+            this.peleasGanadas = peleasGanadas;
         }
     }
-
-    hulk.smash();
-
+    const Antman = new Avenger('AntMan', 'capi');
+    console.log(Antman);
 })();
