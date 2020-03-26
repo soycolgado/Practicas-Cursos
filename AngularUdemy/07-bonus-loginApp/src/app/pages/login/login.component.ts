@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UsuarioModel } from '../../models/usuario.model';
+import { AuthService } from '../../services/auth.service';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,7 +14,8 @@ import { UsuarioModel } from '../../models/usuario.model';
 })
 export class LoginComponent implements OnInit {
   usuario: UsuarioModel;
-  constructor() { }
+  constructor(private auth: AuthService,
+              private router: Router) { }
 
   ngOnInit() {
     this.usuario = new UsuarioModel();
@@ -18,8 +23,27 @@ export class LoginComponent implements OnInit {
 
   login(form: NgForm){
     if(form.invalid){return;};
-    console.log(form);
-    console.log(this.usuario);
+
+    Swal.fire({
+      allowOutsideClick: false,
+      icon: 'info',
+      text: 'Espere por favor...'
+    });
+    Swal.showLoading();
+    // console.log(form);
+    // console.log(this.usuario);
+    this.auth.login(this.usuario).subscribe((resp) => {
+      console.log(resp);
+      Swal.close()
+      this.router.navigateByUrl('/home');
+    }, (err) => {
+      console.log(err.error.error.message);
+      Swal.fire({
+        icon: "error",
+        title: "Error al autenticar",
+        text: err.error.error.message
+      });
+    });
   }
 
 }
