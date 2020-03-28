@@ -70,6 +70,64 @@
         </div>
     </div>
 
+    <div class="row form-group">
+        <label for="" class="col-2 col-form-label">Paises</label>
+        <div class="col-8">
+            <select 
+                    name="paises" 
+                    id="paises" 
+                    class="form-control"
+                    [ngModel] = 'usuario.pais'
+                    minlength = "2"
+                    required
+                    #selectPais='ngModel'
+                    [class.is-invalid]="selectPais.invalid && selectPais.touched"
+                    
+            >   
+                <option *ngFor="let pais of paises" [value]="pais.codigo" >{{pais.nombre}}</option>
+            
+            </select>
+            <small class="form-text text-danger" *ngIf="selectPais.invalid && selectPais.touched">
+                Debe seleccionar un pais
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Sexo</label>
+        <div class="col-8">
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input" 
+                    type="radio"
+                    name="genero"
+                    id="masculino"
+                    value="M"
+                    [ngModel] = "usuario.genero"
+                    [class.is-invalid]="genero.invalid && genero.touched"
+                    #genero="ngModel"
+                    required
+                >
+                <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input" 
+                    type="radio"
+                    name="genero"
+                    id="femenino"
+                    value="F"
+                    [ngModel] = "usuario.genero"
+                    [class.is-invalid]="genero.invalid && genero.touched"
+                    #genero="ngModel"
+                    required
+                >
+                <label class="form-check-label" for="femenino">Femenino</label>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="form-group row">
