@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechat-a39b5": {
+      "hosting": {
+        "pruebaFire": [
+          "firechat-a39b5"
+        ]
+      }
+    }
+  }
+}

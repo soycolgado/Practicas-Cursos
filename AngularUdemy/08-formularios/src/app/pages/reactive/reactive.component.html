@@ -50,6 +50,49 @@
             <small class="form-text text-danger" *ngIf="correoNoValido">Ingrese un correo valido</small>
         </div>
     </div>
+    
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Usuario</label>
+        <div class="col">
+
+            <input 
+                class="form-control" 
+                type="text" 
+                placeholder="Nombre de usuario"
+                formControlName="usuario"
+                [class.is-invalid]="usuarioNoValido"
+            >
+            <small class="form-text text-danger" *ngIf="usuarioNoValido">Ingrese un usuario valido</small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="" class="col-form-label col-2">Contraseña</label>
+        <div class="col">
+            <input 
+            type="text"
+            class="form-control"
+            placeholder="Contraseña"
+            formControlName="pass1"
+            [class.is-invalid]="pass1NoValido">
+            
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="" class="col-form-label col-2">Repita</label>
+        <div class="col">     
+            <input 
+            type="text"
+            class="form-control"
+            placeholder="Repita Contraseña"
+            formControlName="pass2"
+            [class.is-invalid]="pass2NoValido"
+            >
+            
+        </div>
+    </div>
+
 
     <div class="form-group row" formGroupName="direccion">
         <label for="" class="col-form-label col-2">Direccion</label>
@@ -82,6 +125,33 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Pasatiempo</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+                <tbody formArrayName="pasatiempos">
+                    <tr *ngFor="let control of pasatiempos.controls; let i = index">
+                        <td>
+                            {{i + 1}}
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" [formControlName]="i">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-outline-danger" (click)="borrarPasatiempo(i)">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-outline-primary btn-block mt-3 mb-5" type="button" (click)="agregarPasatiempo()">+ Agregar</button>
+        </div>
+    </div>
 
 
     <div class="form-group row">
@@ -104,4 +174,4 @@
 
 <pre>
     {{forma.value | json}}
-</pre>
+</pre>  
